@@ -1,33 +1,24 @@
-# Newman Center (מרכז ניומן) — Next-Gen GEO / AEO / SEO & CRO Satellite Demo
+# Newman Center — Next-Gen 3-Page Satellite Prototype (RU / HE / EN)
 
-Демонстрационный трехстраничный интерактивный сайт-сателлит для Учебного центра «Ньюмен» (`https://newman.co.il/` / `מרכז ניומן`, основан в 1991 году, Тель-Авив, Дерех ха-Агана 34, телефон `*3331`) и обслуживающего агентства `Nikk.Agency`.
+Live Demo on GitHub Pages:
+- **Home (Витрина & Доверие)**: https://get777903-tech.github.io/newman-nextgen-demo/
+- **Money Page (Калькулятор Ваучера 80% / 7000₪ и Пикадона 100%)**: https://get777903-tech.github.io/newman-nextgen-demo/offer.html
+- **B2B Audit & Growth Strategy (+261% Conversion Lift)**: https://get777903-tech.github.io/newman-nextgen-demo/audit.html
 
-## Структура трехстраничного демонстратора
-
-1. **`index.html` — Главная интерактивная витрина (Master Hub)**:
-   - Стандарт Dark Mode First (`#0B0F19`, Glassmorphism) с мгновенным переключателем Темная / Светлая тема (`250ms`) и переключателем языков **RU (LTR) / HE (RTL, עברית)**.
-   - Лента круглых сторис-превью (App-Like Story Bubbles) с условиями государственных ваучеров (80–100%), армейского Пикадона ЦАХАЛ и историями выпускников.
-   - Интерактивный хук первых 1.5 секунд и живой поиск по 19 сертифицированным курсам.
-   - 4-шаговый AI-советник (Quiz Widget) с неоновой шкалой прогресса (Dopamine Progress Bar).
-   - Каталог 6 факультетов в стиле Bento Grid с живыми индикаторами статуса, ценами и вилками зарплат выпускников в Израиле (`₪` и `USD`).
-   - Интерактивный GEO-навигатор по 6 городам Израиля (Тель-Авив, Рамат-Ган, Нетания, Ашдод, Хайфа, Беэр-Шева).
-   - Блок AEO (6 эталонных ответов по 45–55 слов) и валидная микроразметка `Schema.org JSON-LD` (`EducationalOrganization`, `LocalBusiness`, `Course`, `FAQPage`).
-
-2. **`offer.html` — Высокомаржинальная посадочная страница (Money Page — Факультет Hi-Tech и Бухгалтерии)**:
-   - Интерактивный калькулятор с 3 тактильными ползунками (Live Touch Sliders) и чекбоксом «Армейский Пикадон ЦАХАЛ (100%)»: расчет ваучера Министерства алии (до `12 000 ₪` / `$3,200`), личной доплаты студента и стартовой зарплаты в Израиле (`14 000 – 28 000 ₪/мес`).
-   - Сравнительная матрица ТОП-5 высокомаржинальных программ обучения.
-   - Лид-магнит и выезжающая снизу нативная шторка (Bottom Sheet) с `inputmode="tel"`, сохранением лида в `localStorage` (`newman_crm_leads`) и мгновенным переходом в WhatsApp (`+972-3-560-30-46`).
-
-3. **`audit.html` — Презентационный дашборд для владельца бизнеса и агентства (Executive Pitch, Audit, Predictive KPI & Live CRM)**:
-   - Визуальное сравнение «До и После» (`LCP 4.2с -> 0.7с`, конверсия `1.8% -> 6.5%`, AEO-готовность `15% -> 98%`).
-   - Карта найденных уязвимостей GEO, AEO, SEO и Mobile UX.
-   - Интерактивный калькулятор упущенной выручки для собственника в долларах США и шекелях.
-   - Живая встроенная мини-CRM (симуляция AppSheet / Monday.com), отображающая все тестовые заявки со страниц `index.html` и `offer.html`.
-   - Готовый оффер 7-дневного безопасного A/B сплит-теста и тексты питчей на русском и иврите.
-
-## Файлы мультиагентного конвейера (Shared Directory Handoffs)
-
-- `01_PARSED_FACTS.json` — артефакт Агента 1 (Парсер смыслов и фактологии `newman.co.il`).
-- `02_ALGORITHMIC_AUDIT.json` — артефакт Агента 2 (Алгоритмический аудитор GEO/AEO/SEO и финансовых потерь).
-- `03_OFFER_AND_AEO_PACK.json` — артефакт Агента 3 (Бренд-стратег, УТП, AEO Q&A и JSON-LD).
-- `assets/` — артефакты Агента 7 (сгенерированные тематические фотореалистичные изображения кампуса, IT-лаборатории и выпускников).
+## Key Features (v2.0 Upgrade)
+1. **English Brand Header**: `Newman Center` (`מרכז ניומן • Est. 1991`) across all pages.
+2. **3-Language Switcher (`RU | עב | EN`)**: Instant client-side language switching with automatic RTL (`dir="rtl"`) for Hebrew and LTR (`dir="ltr"`) for Russian and English, persisted in `localStorage.getItem('newman_lang')`.
+3. **Zero Built-in CRM**: Direct 1-click lead routing to WhatsApp (`https://wa.me/97235603046`) and short phone number `*3331`.
+4. **Violet & Sky-Blue Palette with High-Contrast Light Text**: Adaptive Dark/Light mode (`newman_theme`) with zero green classes.
+5. **AI & Digital Marketing / Traffic Courses (`GEO / AEO / SEO`)**: Flagship training track for ranking in ChatGPT, Perplexity, Claude, and Google AI Overviews.
+6. **Supercharged Original Hooks from `newman.co.il`**:
+   - Современная программа обучения (85% практики)
+   - Опытные преподаватели (Senior & Team Lead практики)
+   - Помощь с трудоустройством (92% трудоустройство + письменное обязательство)
+   - Мобильные приложения (особенно приложения для Android)
+   - Настольные приложения
+   - Веб-приложения
+   - Веб-серверы и серверы приложений
+   - Игры
+7. **Verified Ministry of Aliyah Voucher Rules (`gov.il` / `kolzchut.org.il`)**: Up to **80% tuition coverage (up to `7000₪` / `1900$`)** for Olim Chadashim (up to 10 years) and Toshavim Chozerim (up to 2 years) with Newman Center's written placement commitment (`התחייבות להשמה בעבודה`), plus **up to 100%** from the IDF Pikadon (`פיקדון לחיילים משוחררים`).
+8. **Unspaced Salary & Subsidy Figures**: `15000–28000₪` (`4000–7500$`), `14000–26000₪` (`3800–7000$`), `10000–17000₪` (`2700–4600$`), `7000₪` (`1900$`).

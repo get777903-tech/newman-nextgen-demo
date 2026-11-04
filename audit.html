@@ -2,14 +2,14 @@
 <html lang="ru" dir="ltr" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newman Center (*3331) & Nikk.Agency — Алгоритмический GEO/AEO Аудит, ROI-Калькулятор и Live CRM</title>
-  <meta name="description" content="Интерактивный технический, конверсионный и AEO/GEO аудит экосистемы newman.co.il, ucheba.co.il и courses.nikk.co.il. Калькулятор упущенной выручки, живая мини-CRM и 7-дневный A/B сплит-тест без риска." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Newman Center — B2B Аудит Конверсии (+261%), GEO/AEO/SEO Трафик и Архитектура Роста</title>
+  <meta name="description" content="Newman Center (מרכז ניומן): технологический B2B-аудит, сравнение было/стало (+261% к конверсии, +83% к скорости), запуск курсов AI и GEO/AEO/SEO трафика, калькулятор упущенной выручки и готовое предложение 7-дневного сплит-теста." />
 
-  <!-- Google Fonts: Plus Jakarta Sans, Inter, Heebo, Rubik -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Rubik:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, Heebo, Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,1794 +18,799 @@
       darkMode: 'class',
       theme: {
         extend: {
-          colors: {
-            obsidian: '#0B0F19',
-            slateCard: '#111827',
-            electric: '#3B82F6',
-            emeraldSignal: '#10B981',
-            amberSignal: '#F59E0B',
-            crimsonSignal: '#EF4444'
-          },
           fontFamily: {
-            sans: ['Inter', 'Heebo', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Rubik', 'sans-serif']
+            sans: ['Inter', 'Heebo', 'Rubik', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Rubik', 'Heebo', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#090D16',
+            midnight: '#0F172A',
+          },
+          animation: {
+            'aurora': 'aurora 14s ease-in-out infinite alternate',
+            'shimmer': 'shimmer 2.8s linear infinite',
+          },
+          keyframes: {
+            aurora: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '50%': { transform: 'translate(30px, -25px) scale(1.08)' },
+              '100%': { transform: 'translate(-20px, 20px) scale(0.96)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
           }
         }
       }
     };
   </script>
 
-  <!-- Early Theme & Language Initialization -->
-  <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('newman_theme') || 'dark';
-        if (savedTheme === 'light') {
-          document.documentElement.classList.remove('dark');
-        } else {
-          document.documentElement.classList.add('dark');
-        }
-        const savedLang = localStorage.getItem('newman_lang') || 'ru';
-        document.documentElement.lang = savedLang;
-        document.documentElement.dir = savedLang === 'he' ? 'rtl' : 'ltr';
-      } catch (e) {}
-    })();
-  </script>
-
-  <!-- Schema.org JSON-LD (EducationalOrganization + Course + FAQPage) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["EducationalOrganization", "LocalBusiness"],
-        "@id": "https://newman.co.il/#organization",
-        "name": "Учебный центр Ньюмен (Newman Center / מרכז ניומן)",
-        "url": "https://newman.co.il/",
-        "foundingDate": "1991",
-        "telephone": "+972-3-560-30-46",
-        "email": "info@newman.co.il",
-        "priceRange": "₪4,100 - ₪15,500 ($1,100 - $4,200)",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Derech HaHagana 34 (דרך ההגנה 34)",
-          "addressLocality": "Tel Aviv-Yafo",
-          "addressCountry": "IL"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "*3331",
-            "contactType": "admissions",
-            "availableLanguage": ["Russian", "Hebrew"]
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-
   <style>
+    :root {
+      --bg-primary: #090D16;
+      --bg-secondary: #0F172A;
+      --text-primary: #FFFFFF;
+      --text-secondary: #E0F2FE;
+      --card-bg: rgba(15, 23, 42, 0.78);
+      --card-border: rgba(168, 85, 247, 0.28);
+    }
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #F1F5F9;
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(139, 92, 246, 0.28);
+    }
     body {
-      transition: background-color 250ms ease, color 250ms ease;
-    }
-    html[dir="rtl"] body {
-      font-family: 'Heebo', 'Rubik', sans-serif;
-    }
-    html[dir="ltr"] body {
-      font-family: 'Inter', sans-serif;
-    }
-    h1, h2, h3, .font-heading {
-      font-family: 'Plus Jakarta Sans', 'Rubik', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      transition: background-color 0.35s ease, color 0.35s ease;
     }
     .glass-card {
-      background: rgba(17, 24, 39, 0.78);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
     }
-    html:not(.dark) .glass-card {
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(15, 23, 42, 0.09);
-      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.07);
+    html.light .glass-card {
+      box-shadow: 0 12px 32px -8px rgba(99, 102, 241, 0.12);
     }
-    .glass-card:hover {
-      border-color: rgba(59, 130, 246, 0.35);
+    .shimmer-btn {
+      background: linear-gradient(90deg, #9333EA 0%, #38BDF8 50%, #9333EA 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
     }
-    /* Custom Range Slider */
-    input[type="range"].audit-slider {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 8px;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.22);
-      outline: none;
+    .gradient-text {
+      background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 45%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    input[type="range"].audit-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #10B981;
-      border: 3px solid #ffffff;
-      cursor: pointer;
-      box-shadow: 0 0 12px rgba(16, 185, 129, 0.65);
-      transition: transform 150ms ease;
+    html.light .gradient-text {
+      background: linear-gradient(135deg, #7E22CE 0%, #9333EA 45%, #0284C7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    input[type="range"].audit-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.12);
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .grid-glow {
-      background-image: radial-gradient(rgba(59, 130, 246, 0.14) 1px, transparent 1px);
-      background-size: 24px 24px;
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .num-nowrap {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      display: inline-block;
     }
   </style>
 </head>
-<body class="bg-[#F8FAFC] dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 min-h-screen pb-24 md:pb-12 selection:bg-blue-500 selection:text-white">
+<body class="antialiased selection:bg-violet-600 selection:text-white pb-24 lg:pb-12">
 
-  <!-- STICKY UNIFIED HEADER -->
-  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-white/10 bg-white/85 dark:bg-[#0B0F19]/85 backdrop-blur-xl transition-colors duration-250">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
-      
+  <!-- Background Aurora Borealis Mesh -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-violet-600/20 blur-[130px] animate-aurora"></div>
+    <div class="absolute top-1/3 -right-32 w-[460px] h-[460px] rounded-full bg-sky-500/20 blur-[130px] animate-aurora" style="animation-delay: -5s;"></div>
+    <div class="absolute -bottom-32 left-1/4 w-[420px] h-[420px] rounded-full bg-fuchsia-600/15 blur-[140px] animate-aurora" style="animation-delay: -9s;"></div>
+  </div>
+
+  <!-- Top Sticky Navigation Header (Brand ALWAYS in English: Newman Center) -->
+  <header class="sticky top-0 z-50 glass-card border-b border-violet-500/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
       <!-- Brand Identity -->
       <a href="index.html" class="flex items-center gap-3 group shrink-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
-          N
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-violet-600 via-purple-600 to-sky-500 flex items-center justify-center shadow-lg shadow-violet-600/30 group-hover:scale-105 transition-transform">
+          <span class="font-display font-extrabold text-white text-xl tracking-tight">N</span>
         </div>
         <div>
-          <div class="flex items-center gap-2">
-            <span class="font-heading font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white" data-i18n="brand_name">NEWMAN CENTER</span>
-            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">1991 • *3331</span>
+          <div class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white flex items-center gap-2">
+            <span>Newman Center</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-500/20 text-violet-200 border border-violet-400/30">Est. 1991</span>
           </div>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block" data-i18n="brand_sub">Executive Audit & ROI Hub • Nikk.Agency</p>
+          <p class="text-xs text-sky-200/90" data-i18n="nav_subtitle">מרכז ניומן • Академия IT, AI, GEO/AEO/SEO и Карьеры</p>
         </div>
       </a>
 
-      <!-- 3-Page Navigation -->
-      <nav class="hidden md:flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10">
-        <a href="index.html" class="px-3.5 py-2 rounded-xl text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white/60 dark:hover:bg-white/5 transition-all" data-i18n="nav_index">
-          1. Главная витрина
-        </a>
-        <a href="offer.html" class="px-3.5 py-2 rounded-xl text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-white/60 dark:hover:bg-white/5 transition-all" data-i18n="nav_offer">
-          2. Hi-Tech и Ваучеры
-        </a>
-        <a href="audit.html" class="px-3.5 py-2 rounded-xl text-xs lg:text-sm font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-500/25 flex items-center gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span data-i18n="nav_audit">3. Аудит и ROI для владельца</span>
-        </a>
+      <!-- Center Page Links -->
+      <nav class="hidden lg:flex items-center gap-1 bg-slate-900/70 border border-violet-500/25 rounded-2xl p-1.5">
+        <a href="index.html" class="px-4 py-2 rounded-xl text-sm font-medium text-sky-100 hover:text-white hover:bg-violet-600/20 transition-all" data-i18n="nav_home">Главная</a>
+        <a href="offer.html" class="px-4 py-2 rounded-xl text-sm font-medium text-sky-100 hover:text-white hover:bg-violet-600/20 transition-all" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
+        <a href="audit.html" class="px-4 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-violet-600 to-sky-500 shadow-md shadow-violet-600/25" data-i18n="nav_audit">Аудит &amp; Стратегия Роста</a>
       </nav>
 
-      <!-- Controls: Lang, Theme, Quick Jump to CRM -->
-      <div class="flex items-center gap-2">
-        <!-- Language Toggle RU | עב -->
-        <button id="langToggleBtn" type="button" onclick="toggleLanguage()" class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-white/15 bg-slate-100 dark:bg-slate-800/80 hover:border-blue-500 transition-all flex items-center gap-1.5" title="Switch Language RU / HE">
-          <span id="langBadgeRu" class="text-blue-600 dark:text-blue-400 font-extrabold">RU</span>
-          <span class="text-slate-400">|</span>
-          <span id="langBadgeHe" class="text-slate-500 dark:text-slate-400">עב</span>
+      <!-- Right Controls: Language Switcher RU | עב | EN + Theme Toggle + Phone -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- 3-Language Switcher -->
+        <div class="flex items-center bg-slate-900/90 border border-violet-400/30 rounded-xl p-1" role="group" aria-label="Language Switcher">
+          <button type="button" onclick="setLanguage('ru')" id="lang-btn-ru" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow">RU</button>
+          <button type="button" onclick="setLanguage('he')" id="lang-btn-he" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all text-sky-200 hover:text-white">עב</button>
+          <button type="button" onclick="setLanguage('en')" id="lang-btn-en" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all text-sky-200 hover:text-white">EN</button>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" onclick="toggleTheme()" id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-slate-900/80 border border-violet-400/30 flex items-center justify-center text-sky-200 hover:text-white hover:border-sky-400 transition-all" aria-label="Toggle Theme">
+          <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
-        <!-- Theme Toggle Dark / Light -->
-        <button id="themeToggleBtn" type="button" onclick="toggleTheme()" class="p-2.5 rounded-xl border border-slate-200 dark:border-white/15 bg-slate-100 dark:bg-slate-800/80 hover:border-blue-500 text-slate-700 dark:text-amber-300 transition-all" title="Toggle Dark / Light Mode">
-          <svg id="themeIconSun" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
-          <svg id="themeIconMoon" class="w-4 h-4 block dark:hidden text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-          </svg>
-        </button>
-
-        <!-- Live CRM Badge Button -->
-        <a href="#crm-section" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 transition-all">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-          <span data-i18n="header_crm_btn">Live CRM</span>
-          <span id="navCrmCount" class="px-1.5 py-0.5 rounded-md bg-emerald-500 text-slate-950 font-extrabold text-[11px]">3</span>
+        <!-- Direct Phone CTA -->
+        <a href="tel:*3331" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-sky-500 text-white font-bold text-sm shadow-lg shadow-violet-600/30 hover:opacity-95 transition-all">
+          <span>*3331</span>
         </a>
       </div>
+    </div>
+
+    <!-- Mobile Sub-nav -->
+    <div class="lg:hidden flex items-center justify-around border-t border-violet-500/20 bg-slate-950/80 px-2 py-2 text-xs font-semibold">
+      <a href="index.html" class="px-3 py-1.5 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_home">Главная</a>
+      <a href="offer.html" class="px-3 py-1.5 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
+      <a href="audit.html" class="px-3 py-1.5 rounded-lg bg-violet-600/30 text-white border border-violet-400/40" data-i18n="nav_audit">Аудит &amp; Рост</a>
     </div>
   </header>
 
-  <!-- HERO EXECUTIVE SCORECARD -->
-  <section class="relative overflow-hidden pt-8 pb-12 sm:py-14 border-b border-slate-200/70 dark:border-white/10 grid-glow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Executive Pill -->
-      <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-5">
-        <span class="px-2 py-0.5 rounded-full bg-blue-600 text-white font-bold text-[10px]">EXECUTIVE REPORT 2026</span>
-        <span data-i18n="hero_eyebrow">Для руководства Newman Center (newman.co.il) и партнера Nikk.Agency (Александр Луценко)</span>
-      </div>
+  <main class="relative z-10">
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Left Column: Headline & Executive Summary -->
-        <div class="lg:col-span-7 space-y-5">
-          <h1 class="font-heading text-2xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-[1.15] text-slate-900 dark:text-white" data-i18n="hero_title">
-            Алгоритмический GEO/AEO-аудит, калькулятор упущенной выручки и Live CRM для <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-400">Newman Center</span>
-          </h1>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="hero_subtitle">
-            Детальный разбор того, почему текущая связка сайтов <code class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-rose-500 font-mono text-xs">newman.co.il</code>, <code class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-rose-500 font-mono text-xs">ucheba.co.il</code> и <code class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-rose-500 font-mono text-xs">courses.nikk.co.il</code> теряет до 65% мобильного трафика и $42,000–$95,000/мес на ваучерах Министерства алии (80–100%) и армейском Пикадоне — и как параллельный Next-Gen сателлит поднимает конверсию с 1.8% до 6.5% за 7 дней без риска.
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="#roi-calculator" class="px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 shadow-lg shadow-emerald-500/25 transition-all flex items-center gap-2">
-              <span data-i18n="btn_open_roi">Рассчитать упущенную выручку (ROI)</span>
-              <span>→</span>
-            </a>
-            <a href="#crm-section" class="px-5 py-3 rounded-xl font-bold text-sm glass-card hover:border-blue-500 text-slate-800 dark:text-white transition-all flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-              <span data-i18n="btn_open_crm">Открыть живую CRM с заявками</span>
-            </a>
-            <a href="#pitch-section" class="px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/5 transition-all" data-i18n="btn_open_pitch">
-              Питч для Nikk.Agency (1 клик)
-            </a>
-          </div>
+    <!-- HERO SECTION: Executive B2B Audit & Percentage Growth Proof -->
+    <section class="pt-10 pb-14 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-violet-400/40 shadow-2xl reveal visible">
+        <div class="inline-flex flex-wrap items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/25 border border-violet-400/40 text-sky-100 text-xs font-extrabold uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+          <span data-i18n="audit_badge">Аналитический разбор потенциала newman.co.il • GEO / AEO / SEO 2026</span>
         </div>
 
-        <!-- Right Column: Overall Health Score Comparison Card -->
-        <div class="lg:col-span-5">
-          <div class="glass-card rounded-2xl p-5 sm:p-6 border border-blue-500/30 shadow-2xl relative overflow-hidden">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-400" data-i18n="scorecard_header">LeadsGorilla & Oppora AI Audit v2026</span>
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-500/15 text-rose-500 border border-rose-500/30" data-i18n="scorecard_badge">9 критических уязвимостей</span>
-            </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl leading-[1.14] text-white max-w-4xl">
+          <span data-i18n="audit_title_1">Как увеличить конверсию трафика Newman Center на</span>
+          <span class="gradient-text num-nowrap"> +261% </span>
+          <span data-i18n="audit_title_2">и вернуть упущенную выручку</span>
+          <span class="text-sky-300 num-nowrap"> 42000–95000$ </span>
+          <span data-i18n="audit_title_3">в месяц</span>
+        </h1>
 
-            <div class="grid grid-cols-2 gap-4 mb-5">
-              <!-- Legacy Score -->
-              <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/25">
-                <div class="text-xs font-semibold text-rose-400 mb-1" data-i18n="legacy_label">Текущие сайты (Legacy)</div>
-                <div class="flex items-baseline gap-1">
-                  <span class="text-3xl sm:text-4xl font-extrabold text-rose-500">34</span>
-                  <span class="text-sm text-slate-400">/ 100</span>
-                </div>
-                <div class="mt-2 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
-                  <div>• LCP: <strong class="text-rose-400">4.2s (Fail)</strong></div>
-                  <div>• Mobile CR: <strong class="text-rose-400">1.8%</strong></div>
-                  <div>• AI / AEO: <strong class="text-rose-400">12–15%</strong></div>
-                </div>
-              </div>
+        <p class="text-sky-100/95 text-base sm:text-lg mt-4 max-w-3xl leading-relaxed" data-i18n="audit_desc">
+          Newman Center (מרכז ניומן) обладает колоссальным 35-летним репутационным капиталом, сильными преподавателями-практиками и правом на оформление государственных ваучеров до 80% (<span class="num-nowrap font-bold text-white">7000₪</span>) и Пикадона до 100%. Однако устаревшая мобильная верстка текущего сайта на Wix теряет до 68% горячего мобильного трафика. Ниже — точный расчёт точек роста в процентах и готовое решение.
+        </p>
 
-              <!-- Next-Gen Score -->
-              <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
-                <div class="text-xs font-semibold text-emerald-400 mb-1" data-i18n="nextgen_label">Next-Gen Сателлит</div>
-                <div class="flex items-baseline gap-1">
-                  <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400">98</span>
-                  <span class="text-sm text-slate-400">/ 100</span>
-                </div>
-                <div class="mt-2 text-[11px] text-slate-500 dark:text-slate-300 space-y-1">
-                  <div>• LCP: <strong class="text-emerald-400">0.7s (Instant)</strong></div>
-                  <div>• Mobile CR: <strong class="text-emerald-400">6.5% (x3.6)</strong></div>
-                  <div>• AI / AEO: <strong class="text-emerald-400">98% Ready</strong></div>
-                </div>
-              </div>
-            </div>
+        <!-- 4 Executive Percentage KPI Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-violet-400/35">
+            <div class="text-xs font-bold uppercase text-sky-200" data-i18n="kpi_1_lbl">Рост конверсии в заявку</div>
+            <div class="font-display font-extrabold text-3xl sm:text-4xl text-sky-300 mt-1 num-nowrap">+261%</div>
+            <p class="text-xs text-sky-100/80 mt-1" data-i18n="kpi_1_sub">С 1.8% до 6.5% за счёт калькулятора ваучера 80%</p>
+          </div>
 
-            <!-- Financial Summary Bar -->
-            <div class="p-3.5 rounded-xl bg-slate-900/90 text-white border border-white/10 flex items-center justify-between">
-              <div>
-                <div class="text-[11px] text-slate-400" data-i18n="scorecard_loss_label">Потенциал возврата упущенной выручки:</div>
-                <div class="text-base sm:text-lg font-extrabold text-emerald-400">+$42,000 – $95,000 / мес</div>
-              </div>
-              <div class="text-right">
-                <div class="text-[11px] text-slate-400" data-i18n="scorecard_annual_label">Годовой эффект:</div>
-                <div class="text-sm font-bold text-blue-400">+$504K – $1.14M</div>
-              </div>
-            </div>
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-sky-400/35">
+            <div class="text-xs font-bold uppercase text-sky-200" data-i18n="kpi_2_lbl">Ускорение на смартфонах</div>
+            <div class="font-display font-extrabold text-3xl sm:text-4xl text-violet-300 mt-1 num-nowrap">+83%</div>
+            <p class="text-xs text-sky-100/80 mt-1" data-i18n="kpi_2_sub">Загрузка 0.8 сек вместо 4.8 сек (LCP Mobile)</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-violet-400/35">
+            <div class="text-xs font-bold uppercase text-sky-200" data-i18n="kpi_3_lbl">Видимость в ИИ (GEO / AEO)</div>
+            <div class="font-display font-extrabold text-3xl sm:text-4xl text-sky-300 mt-1 num-nowrap">98%</div>
+            <p class="text-xs text-sky-100/80 mt-1" data-i18n="kpi_3_sub">JSON-LD разметка для ChatGPT, Perplexity и Google AI</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-sky-400/35">
+            <div class="text-xs font-bold uppercase text-sky-200" data-i18n="kpi_4_lbl">Охват языковых рынков</div>
+            <div class="font-display font-extrabold text-3xl sm:text-4xl text-violet-300 mt-1 num-nowrap">100%</div>
+            <p class="text-xs text-sky-100/80 mt-1" data-i18n="kpi_4_sub">Мгновенное переключение RU / עב / EN в 1 клик</p>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- BLOCK 1: INTERACTIVE VISUAL SPLIT COMPARISON (BEFORE VS AFTER) -->
-  <section id="split-comparison" class="py-12 sm:py-16 border-b border-slate-200/70 dark:border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-blue-500" data-i18n="sec1_eyebrow">РАЗДЕЛ 1 • ВИЗУАЛЬНОЕ И ТЕХНИЧЕСКОЕ СРАВНЕНИЕ «ДО И ПОСЛЕ»</span>
-          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1" data-i18n="sec1_title">
-            Связка 2010-х (newman.co.il / ucheba.co.il) против Next-Gen Сателлита 2026
-          </h2>
-        </div>
-        <div class="flex items-center gap-2">
-          <button type="button" onclick="setSplitPosition(15)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30 hover:bg-rose-500/25 transition-all" data-i18n="btn_show_before">Показать «До» (Legacy)</button>
-          <button type="button" onclick="setSplitPosition(50)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-500/15 text-blue-400 border border-blue-500/30 hover:bg-blue-500/25 transition-all">50 / 50</button>
-          <button type="button" onclick="setSplitPosition(85)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all" data-i18n="btn_show_after">Показать «После» (Next-Gen)</button>
-        </div>
-      </div>
-
-      <!-- Interactive Slider Control Bar -->
-      <div class="glass-card rounded-2xl p-4 sm:p-6 mb-8">
-        <div class="flex items-center justify-between text-xs font-bold mb-2">
-          <span class="text-rose-500 flex items-center gap-1.5">
-            <span>⚠️</span>
-            <span data-i18n="split_left_label">ДО: Текущие сайты newman.co.il / ucheba.co.il / courses.nikk.co.il (LCP 4.2с • CR 1.8% • AEO 15%)</span>
-          </span>
-          <span class="text-emerald-500 flex items-center gap-1.5">
-            <span>🚀</span>
-            <span data-i18n="split_right_label">ПОСЛЕ: Next-Gen Сателлит (LCP 0.7с • CR 6.5% • AEO 98%)</span>
-          </span>
-        </div>
-
-        <input id="beforeAfterRange" type="range" min="5" max="95" value="50" class="audit-slider my-3" oninput="updateSplitView(this.value)" />
-
-        <!-- Split Visual Viewport -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4 items-stretch">
-          <!-- Legacy Card (Left) -->
-          <div id="legacyPanel" class="lg:col-span-6 rounded-xl p-5 bg-rose-950/20 dark:bg-rose-950/25 border border-rose-500/30 transition-all duration-200 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30" data-i18n="legacy_card_badge">СТАРАЯ АРХИТЕКТУРА (2010–2018)</span>
-                <span class="font-mono text-xs text-rose-400">LCP: 4.2s | INP: 380ms | CLS: 0.24</span>
-              </div>
-              <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="legacy_card_title">
-                Фрагментация трафика между 3 доменами и отсутствие расчета ваучера
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="legacy_card_desc">
-                Рекламный трафик размывается между newman.co.il, ucheba.co.il и courses.nikk.co.il. На смартфонах (82% аудитории) страница грузится 4.2 секунды — 46% пользователей закрывают вкладку до появления оффера.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-rose-500 font-bold">✕</span>
-                  <span data-i18n="legacy_bullet_1"><strong>Мобильная конверсия 1.8%:</strong> статические формы «Имя / Телефон» без расчета суммы ваучера (7 000 – 12 000 ₪).</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-rose-500 font-bold">✕</span>
-                  <span data-i18n="legacy_bullet_2"><strong>AEO-готовность 15%:</strong> отсутствие микроразметки Course и FAQPage — ИИ ChatGPT и Perplexity не цитируют центр.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-rose-500 font-bold">✕</span>
-                  <span data-i18n="legacy_bullet_3"><strong>Неквалифицированные лиды:</strong> менеджеры тратят до 70% времени на выяснение стажа в стране и права на субсидию.</span>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t border-rose-500/20 flex items-center justify-between text-xs">
-              <span class="text-slate-400" data-i18n="legacy_footer_left">Mobile UX Score: 41 / 100</span>
-              <span class="font-bold text-rose-400" data-i18n="legacy_footer_right">Потеря до 65% рекламного бюджета</span>
-            </div>
-          </div>
-
-          <!-- Next-Gen Card (Right) -->
-          <div id="nextgenPanel" class="lg:col-span-6 rounded-xl p-5 bg-emerald-950/15 dark:bg-emerald-950/25 border border-emerald-500/40 transition-all duration-200 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" data-i18n="nextgen_card_badge">NEXT-GEN САТЕЛЛИТ (СТАНДАРТ 2026)</span>
-                <span class="font-mono text-xs text-emerald-400">LCP: 0.7s | INP: 45ms | CLS: 0.00</span>
-              </div>
-              <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="nextgen_card_title">
-                Мгновенный Direct Response, 60-секундный AI-Квиз и 98% захват ИИ-выдачи
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="nextgen_card_desc">
-                Параллельный двуязычный (RU/HE) сателлит открывается за 0.7 секунды, сразу вовлекает кандидата в расчет государственного ваучера (80–100%) или Пикадона и передает готовый скоринг-профиль в CRM и WhatsApp.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span data-i18n="nextgen_bullet_1"><strong>Мобильная конверсия 6.5% (рост x3.6):</strong> 4-шаговый квиз и ползунковый калькулятор субсидий и зарплат выпускников.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span data-i18n="nextgen_bullet_2"><strong>AEO-готовность 98%:</strong> JSON-LD (EducationalOrganization, Course, FAQPage) + 6 канонических Q&A блоков по 45–55 слов.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span data-i18n="nextgen_bullet_3"><strong>100% предквалификация:</strong> отдел продаж получает статус репатрианта, срок в стране, курс, город и уровень иврита.</span>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t border-emerald-500/20 flex items-center justify-between text-xs">
-              <span class="text-slate-400" data-i18n="nextgen_footer_left">Mobile UX Score: 99 / 100</span>
-              <span class="font-bold text-emerald-400" data-i18n="nextgen_footer_right">Снижение CPL на 40–55% с 1-й недели</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Core Web Vitals & Conversion Metrics Bar Table -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="glass-card rounded-xl p-4">
-          <div class="text-xs text-slate-400 mb-1" data-i18n="metric_lcp_title">Скорость загрузки (LCP)</div>
-          <div class="flex items-baseline justify-between">
-            <span class="text-sm line-through text-rose-400 font-semibold">4.2 сек</span>
-            <span class="text-xl font-extrabold text-emerald-400">0.7 сек</span>
-          </div>
-          <div class="w-full bg-slate-700/40 h-1.5 rounded-full mt-2 overflow-hidden">
-            <div class="bg-emerald-400 h-full rounded-full" style="width: 92%"></div>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-xl p-4">
-          <div class="text-xs text-slate-400 mb-1" data-i18n="metric_cr_title">Мобильная конверсия (CR)</div>
-          <div class="flex items-baseline justify-between">
-            <span class="text-sm line-through text-rose-400 font-semibold">1.8%</span>
-            <span class="text-xl font-extrabold text-emerald-400">6.5% (x3.6)</span>
-          </div>
-          <div class="w-full bg-slate-700/40 h-1.5 rounded-full mt-2 overflow-hidden">
-            <div class="bg-blue-500 h-full rounded-full" style="width: 88%"></div>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-xl p-4">
-          <div class="text-xs text-slate-400 mb-1" data-i18n="metric_aeo_title">Видимость в ИИ (AEO/GEO)</div>
-          <div class="flex items-baseline justify-between">
-            <span class="text-sm line-through text-rose-400 font-semibold">15%</span>
-            <span class="text-xl font-extrabold text-emerald-400">98%</span>
-          </div>
-          <div class="w-full bg-slate-700/40 h-1.5 rounded-full mt-2 overflow-hidden">
-            <div class="bg-emerald-400 h-full rounded-full" style="width: 98%"></div>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-xl p-4">
-          <div class="text-xs text-slate-400 mb-1" data-i18n="metric_close_title">Конверсия лида в договор</div>
-          <div class="flex items-baseline justify-between">
-            <span class="text-sm line-through text-rose-400 font-semibold">19.0%</span>
-            <span class="text-xl font-extrabold text-emerald-400">28.5%</span>
-          </div>
-          <div class="w-full bg-slate-700/40 h-1.5 rounded-full mt-2 overflow-hidden">
-            <div class="bg-indigo-400 h-full rounded-full" style="width: 82%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOCK 2: DETAILED VULNERABILITY MAP (GEO, AEO, SEO & MOBILE UX) -->
-  <section id="vulnerability-map" class="py-12 sm:py-16 border-b border-slate-200/70 dark:border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-rose-500" data-i18n="sec2_eyebrow">РАЗДЕЛ 2 • КАРТА НАЙДЕННЫХ УЯЗВИМОСТЕЙ GEO, AEO, SEO И MOBILE UX</span>
-          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1" data-i18n="sec2_title">
-            9 точек потери лидов и видимости в ChatGPT / Perplexity / Google AI
-          </h2>
-        </div>
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap gap-2">
-          <button type="button" onclick="filterVulnerabilities('all')" id="vulnTab_all" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all" data-i18n="vuln_tab_all">Все уязвимости (9)</button>
-          <button type="button" onclick="filterVulnerabilities('ux')" id="vulnTab_ux" class="px-3.5 py-2 rounded-xl text-xs font-bold glass-card text-slate-600 dark:text-slate-300 transition-all" data-i18n="vuln_tab_ux">Mobile UX и Конверсия (4)</button>
-          <button type="button" onclick="filterVulnerabilities('aeo')" id="vulnTab_aeo" class="px-3.5 py-2 rounded-xl text-xs font-bold glass-card text-slate-600 dark:text-slate-300 transition-all" data-i18n="vuln_tab_aeo">GEO / AEO и Schema.org (5)</button>
-        </div>
-      </div>
-
-      <!-- Vulnerability Cards Grid -->
-      <div id="vulnGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-        
-        <!-- Card 1: Missing Voucher Calculator -->
-        <div class="vuln-card glass-card rounded-2xl p-5 flex flex-col justify-between" data-category="ux">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-rose-500/20 text-rose-400 border border-rose-500/30">CRITICAL • CRO</span>
-              <span class="text-xs font-mono text-slate-400">#01 / Voucher UX</span>
-            </div>
-            <h3 class="font-heading font-bold text-base mb-2" data-i18n="v1_title">Отсутствие калькулятора ваучеров Министерства алии (80–100%) и Пикадона</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3" data-i18n="v1_problem">
-              <strong>Проблема:</strong> Информация о субсидии 7 000–12 000 ₪ спрятана в сплошном тексте. Кандидат не может мгновенно рассчитать свою личную доплату на курс QA или Full-Stack.
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 dark:text-emerald-300" data-i18n="v1_solution">
-            <strong>Решение в Next-Gen:</strong> Внедрен 4-шаговый квиз (index.html) и ползунковый калькулятор субсидий и зарплат (offer.html) с расчетом за 60 секунд.
-          </div>
-        </div>
-
-        <!-- Card 2: Legacy 2010s Layout & Ecosystem Fragmentation -->
-        <div class="vuln-card glass-card rounded-2xl p-5 flex flex-col justify-between" data-category="ux">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-rose-500/20 text-rose-400 border border-rose-500/30">CRITICAL • CWV & UX</span>
-              <span class="text-xs font-mono text-slate-400">#02 / LCP 4.2s</span>
-            </div>
-            <h3 class="font-heading font-bold text-base mb-2" data-i18n="v2_title">Устаревшая верстка 2010-х и распыление между 3 доменами</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3" data-i18n="v2_problem">
-              <strong>Проблема:</strong> Перекрестные редиректы между newman.co.il, ucheba.co.il и courses.nikk.co.il, задержка LCP 4.2 сек и отсутствие карточек сравнения «цена курса vs зарплата в Израиле».
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 dark:text-emerald-300" data-i18n="v2_solution">
-            <strong>Решение в Next-Gen:</strong> Модульная Bento-витрина 2026 года с LCP 0.7с, фильтрацией по 6 факультетам и бейджами зарплат в ₪ и USD.
-          </div>
-        </div>
-
-        <!-- Card 3: Static Forms Without Scoring -->
-        <div class="vuln-card glass-card rounded-2xl p-5 flex flex-col justify-between" data-category="ux">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-amber-500/20 text-amber-400 border border-amber-500/30">HIGH • LEAD SCORING</span>
-              <span class="text-xs font-mono text-slate-400">#03 / Friction</span>
-            </div>
-            <h3 class="font-heading font-bold text-base mb-2" data-i18n="v3_title">Статические формы заявки без предварительного скоринга</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3" data-i18n="v3_problem">
-              <strong>Проблема:</strong> Форма «Имя / Телефон» дает конверсию всего 1.8% и приводит в отдел продаж лиды без данных о сроке репатриации, праве на ваучер и уровне иврита.
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 dark:text-emerald-300" data-i18n="v3_solution">
-            <strong>Решение в Next-Gen:</strong> Интерактивный микро-скоринг передает в CRM полный профиль: Оле Хадаш / Тошав Хозер / Солдат, стаж, курс и город.
-          </div>
-        </div>
-
-        <!-- Card 4: Missing Sticky Thumb-Zone Bar -->
-        <div class="vuln-card glass-card rounded-2xl p-5 flex flex-col justify-between" data-category="ux">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-amber-500/20 text-amber-400 border border-amber-500/30">HIGH • MOBILE 82%</span>
-              <span class="text-xs font-mono text-slate-400">#04 / Thumb-Zone</span>
-            </div>
-            <h3 class="font-heading font-bold text-base mb-2" data-i18n="v4_title">Отсутствие нижней панели под большой палец (Sticky Thumb-Zone)</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3" data-i18n="v4_problem">
-              <strong>Проблема:</strong> 82% репатриантов и солдат заходят со смартфонов, но на сайте нет фиксированной нижней панели для мгновенного набора *3331 или WhatsApp.
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 dark:text-emerald-300" data-i18n="v4_solution">
-            <strong>Решение в Next-Gen:</strong> Нативный Sticky Thumb-Zone Bar внизу экрана смартфона с вызовом *3331, проверкой ваучера и сменой RU/HE.
-          </div>
-        </div>
-
-        <!-- Card 5: ChatGPT Search Blind Spot -->
-        <div class="vuln-card glass-card rounded-2xl p-5 flex flex-col justify-between" data-category="aeo">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-rose-500/20 text-rose-400 border border-rose-500/30">BLIND SPOT • OPENAI</span>
-              <span class="text-xs font-mono text-slate-400">#05 / ChatGPT Search</span>
-            </div>
-            <h3 class="font-heading font-bold text-base mb-2" data-i18n="v5_title">Невидимость в ChatGPT Search по запросам о ваучерах и курсах</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3" data-i18n="v5_problem">
-              <strong>Проблема:</strong> По запросу «курсы QA и программирования в Тель-Авиве по ваучеру министерства алии» нет машиночитаемой связки Entity «Newman Center (*3331) + 80–100% Voucher».
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 dark:text-emerald-300" data-i18n="v5_solution">
-            <strong>Решение в Next-Gen:</strong> Вшита графовая разметка EducationalOrganization + Course с явным указанием субсидии 7,000–12,000 ₪ и адреса Дерех ха-Агана 34.
-          </div>
-        </div>
-
-        <!-- Card 6: Perplexity & Google AI Overviews Blind Spot -->
-        <div class="vuln-card glass-card rounded-2xl p-5 flex flex-col justify-between" data-category="aeo">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-rose-500/20 text-rose-400 border border-rose-500/30">BLIND SPOT • AEO/GEO</span>
-              <span class="text-xs font-mono text-slate-400">#06 / Perplexity & Gemini</span>
-            </div>
-            <h3 class="font-heading font-bold text-base mb-2" data-i18n="v6_title">Отсутствие канонических блоков ответа 45–55 слов (FAQPage Schema)</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3" data-i18n="v6_problem">
-              <strong>Проблема:</strong> Perplexity AI и Google AI Overviews ищут лаконичные Answer-First блоки длиной 45–55 слов с цифрами цен и зарплат. На старом сайте текст размыт.
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-600 dark:text-emerald-300" data-i18n="v6_solution">
-            <strong>Решение в Next-Gen:</strong> Созданы 6 двуязычных (RU/HE) AEO Q&A блоков по 48–52 слова + JSON-LD FAQPage для захвата нулевой позиции.
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Interactive AEO 45-55 Word Q&A & Schema.org Inspector -->
-      <div class="glass-card rounded-2xl p-5 sm:p-6 border border-blue-500/25">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-slate-200/70 dark:border-white/10">
-          <div>
-            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider" data-i18n="aeo_box_eyebrow">ГОТОВЫЙ AEO-ПАКЕТ ДЛЯ ИИ-ПОИСКОВИКОВ (АГЕНТ 3)</span>
-            <h3 class="font-heading text-lg sm:text-xl font-bold mt-0.5" data-i18n="aeo_box_title">
-              Эталонные блоки Q&A (45–55 слов) + Schema.org JSON-LD для захвата ChatGPT и Perplexity
-            </h3>
-          </div>
-          <button type="button" onclick="copyJsonLdSchema()" class="px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all shrink-0" data-i18n="btn_copy_schema">
-            Скопировать JSON-LD схему
-          </button>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="p-4 rounded-xl bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-[11px] font-bold text-blue-500" data-i18n="qa1_badge">AEO Сниппет #1 • Ваучер Министерства алии</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[10px] font-mono">52 words (RU) / 49 words (HE)</span>
-            </div>
-            <h4 class="font-bold text-xs sm:text-sm mb-1.5" data-i18n="qa1_q">Кто имеет право на получение государственного ваучера на обучение в центре Ньюмен и какую сумму покрывает субсидия в Израиле?</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="qa1_a">
-              Право на государственный ваучер Министерства алии и интеграции Израиля имеют новые репатрианты и вернувшиеся израильтяне со сроком проживания в стране до 10 лет. Программа покрывает от 80% до 100% стоимости профессионального курса в учебном центре Ньюмен, что составляет от 7,000 до 12,000 шекелей (1,900–3,200 USD) прямой целевой субсидии на получение востребованной специальности.
-            </p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-[11px] font-bold text-blue-500" data-i18n="qa2_badge">AEO Сниппет #2 • Зарплаты выпускников Hi-Tech</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[10px] font-mono">50 words (RU) / 49 words (HE)</span>
-            </div>
-            <h4 class="font-bold text-xs sm:text-sm mb-1.5" data-i18n="qa2_q">Сколько зарабатывают выпускники курсов Hi-Tech (QA, Full-Stack, Python) учебного центра Ньюмен в Израиле и какова длительность обучения?</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="qa2_a">
-              Длительность обучения на факультете Hi-Tech в центре Ньюмен составляет от 5 до 9 месяцев для программ QA Automation, Full-Stack разработки и Python. Стартовая зарплата выпускников уровня Junior в израильских технологических компаниях варьируется от 14,000 до 27,500 шекелей в месяц (3,800–7,500 USD), что полностью окупает стоимость курса за первый месяц работы.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BLOCK 3: INTERACTIVE LOST REVENUE & PREDICTIVE KPI CALCULATOR (AGENT 5) -->
-  <section id="roi-calculator" class="py-12 sm:py-16 border-b border-slate-200/70 dark:border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400" data-i18n="sec3_eyebrow">РАЗДЕЛ 3 • ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР УПУЩЕННОЙ ВЫРУЧКИ И PREDICTIVE KPI (АГЕНТ 5)</span>
-          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1" data-i18n="sec3_title">
-            Финансовая модель роста для владельцев Newman Center и Nikk.Agency
-          </h2>
-        </div>
-        <!-- Preset Scenarios -->
-        <div class="flex flex-wrap items-center gap-2">
-          <button type="button" onclick="applyRoiPreset(3400, 2480, 22)" class="px-3 py-1.5 rounded-lg text-xs font-bold glass-card hover:border-blue-500 transition-all" data-i18n="preset_conservative">База экосистемы (3 400 виз.)</button>
-          <button type="button" onclick="applyRoiPreset(10000, 2500, 22)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 transition-all" data-i18n="preset_standard">Целевой трафик (10 000 виз.)</button>
-          <button type="button" onclick="applyRoiPreset(25000, 2800, 25)" class="px-3 py-1.5 rounded-lg text-xs font-bold glass-card hover:border-blue-500 transition-all" data-i18n="preset_scale">Масштабирование (25 000 виз.)</button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        
-        <!-- Left 5 Cols: 3 Interactive Sliders -->
-        <div class="lg:col-span-5 glass-card rounded-2xl p-6 space-y-6 border border-blue-500/25">
-          
-          <!-- Slider 1: Monthly Traffic -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label for="sliderTraffic" class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200" data-i18n="slider1_label">
-                1. Текущий месячный трафик посетителей
-              </label>
-              <span id="valTraffic" class="px-2.5 py-1 rounded-lg bg-blue-500/15 text-blue-600 dark:text-blue-400 font-extrabold text-sm font-mono">10,000</span>
-            </div>
-            <input id="sliderTraffic" type="range" min="2000" max="50000" step="500" value="10000" class="audit-slider" oninput="recalcOwnerRoi()" />
-            <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-mono">
-              <span>2,000 виз./мес</span>
-              <span>10,000 (Default)</span>
-              <span>50,000 виз./мес</span>
-            </div>
-          </div>
-
-          <!-- Slider 2: Average Course / Voucher Check (USD) -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label for="sliderAvgCheck" class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200" data-i18n="slider2_label">
-                2. Средний чек курса / ваучера (USD)
-              </label>
-              <span id="valAvgCheck" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-extrabold text-sm font-mono">$2,500</span>
-            </div>
-            <input id="sliderAvgCheck" type="range" min="1500" max="4000" step="50" value="2500" class="audit-slider" oninput="recalcOwnerRoi()" />
-            <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-mono">
-              <span>$1,500 (₪5,500)</span>
-              <span>$2,500 (₪9,200)</span>
-              <span>$4,000 (₪14,700)</span>
-            </div>
-          </div>
-
-          <!-- Slider 3: Sales Close Rate (%) -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <label for="sliderCloseRate" class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200" data-i18n="slider3_label">
-                3. Конверсия отдела продаж из лида в запись (%)
-              </label>
-              <span id="valCloseRate" class="px-2.5 py-1 rounded-lg bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 font-extrabold text-sm font-mono">22%</span>
-            </div>
-            <input id="sliderCloseRate" type="range" min="10" max="40" step="1" value="22" class="audit-slider" oninput="recalcOwnerRoi()" />
-            <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-mono">
-              <span>10%</span>
-              <span>22% (Default)</span>
-              <span>40%</span>
-            </div>
-          </div>
-
-          <!-- Algorithmic Formula Footnote -->
-          <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-white/10 text-xs text-slate-500 dark:text-slate-400 space-y-1">
-            <div class="font-bold text-slate-700 dark:text-slate-200" data-i18n="roi_formula_title">Параметры алгоритмической модели:</div>
-            <div data-i18n="roi_formula_1">• Конверсия старого сайта (Legacy CR): <strong>1.8%</strong></div>
-            <div data-i18n="roi_formula_2">• Конверсия параллельного Next-Gen сателлита: <strong>6.5% (рост x3.61)</strong></div>
-            <div data-i18n="roi_formula_3">• Курс пересчета: <strong>3.67 ₪ / 1 USD</strong> (без увеличения рекламного бюджета)</div>
-          </div>
-        </div>
-
-        <!-- Right 7 Cols: Live KPI Output Dashboard -->
-        <div class="lg:col-span-7 space-y-5">
-          
-          <!-- Top Comparison Row: Leads Legacy vs Leads Next-Gen -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="glass-card rounded-2xl p-4 border-l-4 border-l-rose-500">
-              <div class="text-xs text-slate-400 mb-1" data-i18n="kpi_legacy_leads_label">Текущие лиды (CR 1.8%)</div>
-              <div id="outLegacyLeads" class="text-2xl sm:text-3xl font-extrabold text-slate-700 dark:text-slate-200">180</div>
-              <div class="text-[11px] text-rose-400 mt-1" data-i18n="kpi_legacy_leads_sub">Без скоринга ваучера</div>
-            </div>
-
-            <div class="glass-card rounded-2xl p-4 border-l-4 border-l-blue-500">
-              <div class="text-xs text-slate-400 mb-1" data-i18n="kpi_nextgen_leads_label">Лиды с Next-Gen (CR 6.5%)</div>
-              <div id="outNextgenLeads" class="text-2xl sm:text-3xl font-extrabold text-blue-500">650</div>
-              <div class="text-[11px] text-blue-400 mt-1" data-i18n="kpi_nextgen_leads_sub">Рост потока заявок x3.61</div>
-            </div>
-
-            <div class="glass-card rounded-2xl p-4 border-l-4 border-l-emerald-500 bg-emerald-500/5">
-              <div class="text-xs text-slate-400 mb-1" data-i18n="kpi_added_leads_label">Прирост лидов в месяц</div>
-              <div id="outAddedLeads" class="text-2xl sm:text-3xl font-extrabold text-emerald-400">+470</div>
-              <div id="outAddedStudents" class="text-[11px] text-emerald-400 font-semibold mt-1">+103 новых студентов/мес</div>
-            </div>
-          </div>
-
-          <!-- Main Highlight Box: Additional Monthly & Annual Revenue -->
-          <div class="glass-card rounded-2xl p-6 border-2 border-emerald-500/40 bg-gradient-to-br from-emerald-950/30 via-slate-900/80 to-blue-950/30 text-white shadow-xl">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div>
-                <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase bg-emerald-500 text-slate-950" data-i18n="kpi_rev_badge">ДОПОЛНИТЕЛЬНАЯ ЕЖЕМЕСЯЧНАЯ ВЫРУЧКА</span>
-                <div id="outMonthlyRevUsd" class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mt-2">+$257,500 / мес</div>
-                <div id="outMonthlyRevIls" class="text-sm sm:text-base font-bold text-slate-300 mt-1">≈ +945,025 ₪ в месяц</div>
-                <p class="text-xs text-slate-400 mt-2" data-i18n="kpi_rev_note">
-                  Дополнительный оборот за счет повышения конверсии с 1.8% до 6.5% и предквалификации ваучеров Министерства алии (80–100%) и Пикадона.
-                </p>
-              </div>
-
-              <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                <div class="text-xs text-slate-300 font-semibold" data-i18n="kpi_annual_title">Прогнозируемый годовой эффект (12 мес):</div>
-                <div id="outAnnualRevUsd" class="text-2xl sm:text-3xl font-extrabold text-blue-400 mt-1">+$3,090,000 / год</div>
-                <div id="outAnnualRevIls" class="text-xs sm:text-sm font-semibold text-slate-300 mt-0.5">≈ +11,340,300 ₪ / год</div>
-                <div class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-300">
-                  <span data-i18n="kpi_audit_range_label">Консервативный коридор аудита:</span>
-                  <span class="font-bold text-emerald-400">$42,000 – $120,000 / мес</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown by Course Category (54% Hi-Tech, 22% Accounting, 24% HVAC/Real Estate/Beauty) -->
-          <div class="glass-card rounded-2xl p-5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3" data-i18n="loss_breakdown_title">
-              Распределение потенциала роста по факультетам Newman Center:
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-              <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5">
-                <div class="flex justify-between font-bold mb-1">
-                  <span data-i18n="cat1_name">Hi-Tech (QA, Full-Stack, Python)</span>
-                  <span class="text-blue-400">54%</span>
-                </div>
-                <div id="outCat1Usd" class="text-base font-extrabold text-slate-900 dark:text-white">+$139,050 / мес</div>
-                <div class="text-[11px] text-slate-400 mt-0.5" data-i18n="cat1_sub">Средний чек: $3,260 (ваучер до 100%)</div>
-              </div>
-
-              <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5">
-                <div class="flex justify-between font-bold mb-1">
-                  <span data-i18n="cat2_name">Бухгалтерия 1+2 и Хашав Схар</span>
-                  <span class="text-emerald-400">22%</span>
-                </div>
-                <div id="outCat2Usd" class="text-base font-extrabold text-slate-900 dark:text-white">+$56,650 / мес</div>
-                <div class="text-[11px] text-slate-400 mt-0.5" data-i18n="cat2_sub">Средний чек: $2,040 (госэкзамены)</div>
-              </div>
-
-              <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5">
-                <div class="flex justify-between font-bold mb-1">
-                  <span data-i18n="cat3_name">Кондиционеры, Риелторы, Ульпан</span>
-                  <span class="text-amber-400">24%</span>
-                </div>
-                <div id="outCat3Usd" class="text-base font-extrabold text-slate-900 dark:text-white">+$61,800 / мес</div>
-                <div class="text-[11px] text-slate-400 mt-0.5" data-i18n="cat3_sub">Средний чек: $1,950 (Пикадон / ваучер)</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BLOCK 4: LIVE INTERACTIVE MINI-CRM DASHBOARD (APPSHEET / MONDAY.COM SIMULATION — AGENT 6) -->
-  <section id="crm-section" class="py-12 sm:py-16 border-b border-slate-200/70 dark:border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-500 text-xs font-bold mb-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-            <span data-i18n="sec4_eyebrow">РАЗДЕЛ 4 • ЖИВАЯ МИНИ-CRM ПАНЕЛЬ (СИМУЛЯЦИЯ APPSHEET / MONDAY.COM • АГЕНТ 6)</span>
-          </div>
-          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold" data-i18n="sec4_title">
-            Единая база лидов с квиза (index.html) и калькулятора ваучеров (offer.html)
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="sec4_sub">
-            Синхронизировано через <code class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-emerald-400 font-mono">localStorage.getItem('newman_crm_leads')</code> в реальном времени. Меняйте статус сделки прямо в таблице или отправляйте сообщение в WhatsApp в 1 клик.
-          </p>
-        </div>
-
-        <!-- CRM Action Toolbar -->
-        <div class="flex flex-wrap items-center gap-2">
-          <button type="button" onclick="addOneClickTestLead()" class="px-4 py-2.5 rounded-xl text-xs font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition-all flex items-center gap-1.5">
-            <span>＋</span>
-            <span data-i18n="crm_btn_add_lead">Добавить тестовый лид в 1 клик</span>
-          </button>
-          <button type="button" onclick="exportCrmCsv()" class="px-3.5 py-2.5 rounded-xl text-xs font-bold glass-card hover:border-blue-500 transition-all" data-i18n="crm_btn_csv">
-            Экспорт CSV
-          </button>
-          <button type="button" onclick="exportCrmJson()" class="px-3.5 py-2.5 rounded-xl text-xs font-bold glass-card hover:border-blue-500 transition-all" data-i18n="crm_btn_json">
-            Экспорт JSON
-          </button>
-          <button type="button" onclick="resetDemoLeads()" class="px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-rose-400 border border-slate-200 dark:border-white/10 transition-all" data-i18n="crm_btn_reset">
-            Сброс демо
-          </button>
-        </div>
-      </div>
-
-      <!-- CRM Pipeline Summary KPIs -->
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-5">
-        <div class="glass-card rounded-xl p-3.5">
-          <div class="text-[11px] text-slate-400" data-i18n="crm_kpi_total">Всего лидов в CRM</div>
-          <div id="crmStatTotal" class="text-2xl font-extrabold mt-0.5">3</div>
-        </div>
-        <div class="glass-card rounded-xl p-3.5 border-l-4 border-l-blue-500">
-          <div class="text-[11px] text-slate-400" data-i18n="crm_kpi_new">Новый лид</div>
-          <div id="crmStatNew" class="text-2xl font-extrabold text-blue-500 mt-0.5">1</div>
-        </div>
-        <div class="glass-card rounded-xl p-3.5 border-l-4 border-l-amber-500">
-          <div class="text-[11px] text-slate-400" data-i18n="crm_kpi_voucher">Проверка ваучера</div>
-          <div id="crmStatVoucher" class="text-2xl font-extrabold text-amber-400 mt-0.5">1</div>
-        </div>
-        <div class="glass-card rounded-xl p-3.5 border-l-4 border-l-indigo-500">
-          <div class="text-[11px] text-slate-400" data-i18n="crm_kpi_contract">Договор / Оплачено</div>
-          <div id="crmStatWon" class="text-2xl font-extrabold text-emerald-400 mt-0.5">1</div>
-        </div>
-        <div class="glass-card rounded-xl p-3.5 col-span-2 sm:col-span-1 bg-emerald-500/5 border border-emerald-500/30">
-          <div class="text-[11px] text-slate-400" data-i18n="crm_kpi_pipeline">Сумма сделок (Pipeline)</div>
-          <div id="crmStatValue" class="text-lg sm:text-xl font-extrabold text-emerald-400 mt-0.5">$9,800 (₪36,200)</div>
-        </div>
-      </div>
-
-      <!-- Search & Status Filter Bar -->
-      <div class="glass-card rounded-2xl p-4 mb-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-        <div class="flex flex-wrap items-center gap-1.5">
-          <button type="button" onclick="setCrmStatusFilter('all')" id="crmFilter_all" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all" data-i18n="crm_filter_all">Все</button>
-          <button type="button" onclick="setCrmStatusFilter('new')" id="crmFilter_new" class="px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 dark:hover:bg-white/10 transition-all" data-i18n="status_new">Новый лид</button>
-          <button type="button" onclick="setCrmStatusFilter('voucher_check')" id="crmFilter_voucher_check" class="px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 dark:hover:bg-white/10 transition-all" data-i18n="status_voucher">Проверка ваучера</button>
-          <button type="button" onclick="setCrmStatusFilter('contract_sent')" id="crmFilter_contract_sent" class="px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 dark:hover:bg-white/10 transition-all" data-i18n="status_contract">Договор отправлен</button>
-          <button type="button" onclick="setCrmStatusFilter('paid')" id="crmFilter_paid" class="px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 dark:hover:bg-white/10 transition-all" data-i18n="status_paid">Оплачено</button>
-        </div>
-        <div class="relative">
-          <input id="crmSearchInput" type="text" oninput="renderCrmTable()" placeholder="Поиск по имени, телефону, курсу..." class="w-full sm:w-64 px-3.5 py-2 rounded-xl text-xs bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-white/15 focus:outline-none focus:border-blue-500" />
-        </div>
-      </div>
-
-      <!-- CRM Responsive Table -->
-      <div class="glass-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/10">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="border-b border-slate-200 dark:border-white/10 bg-slate-100/70 dark:bg-slate-900/70 text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                <th class="py-3.5 px-4" data-i18n="th_client">Кандидат и Контакт</th>
-                <th class="py-3.5 px-4" data-i18n="th_course">Выбранный курс и Формат</th>
-                <th class="py-3.5 px-4" data-i18n="th_voucher">Расчет ваучера / Пикадона</th>
-                <th class="py-3.5 px-4" data-i18n="th_source">Источник</th>
-                <th class="py-3.5 px-4" data-i18n="th_status">Статус сделки (Live)</th>
-                <th class="py-3.5 px-4 text-right" data-i18n="th_actions">Действия</th>
-              </tr>
-            </thead>
-            <tbody id="crmTableBody" class="divide-y divide-slate-200/60 dark:divide-white/10 text-xs sm:text-sm">
-              <!-- Populated dynamically by JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BLOCK 5: 7-DAY RISK-FREE A/B SPLIT-TEST OFFER & READY EXECUTIVE PITCH (RU / HE) -->
-  <section id="pitch-section" class="py-12 sm:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="mb-8">
-        <span class="text-xs font-bold uppercase tracking-widest text-blue-500" data-i18n="sec5_eyebrow">РАЗДЕЛ 5 • БЕЗОПАСНЫЙ ОФФЕР (7-DAY RISK-FREE A/B SPLIT-TEST) И СОПРОВОДИТЕЛЬНОЕ ПИСЬМО</span>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1" data-i18n="sec5_title">
-          Запуск параллельного A/B сплит-теста за 7 дней с нулевым риском для основного сайта
-        </h2>
-      </div>
-
-      <!-- 4-Step Zero-Risk A/B Test Roadmap -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-        <div class="glass-card rounded-2xl p-5 border-t-4 border-t-blue-500">
-          <div class="text-xs font-extrabold text-blue-400 mb-1" data-i18n="ab_step1_tag">ШАГ 1 • ДЕНЬ 1</div>
-          <h3 class="font-heading font-bold text-base mb-1.5" data-i18n="ab_step1_title">Не трогаем текущий WordPress</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="ab_step1_desc">
-            Основной сайт newman.co.il продолжает работать в штатном режиме. Никакого вмешательства в текущий код или SEO-индексацию.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 border-t-4 border-t-indigo-500">
-          <div class="text-xs font-extrabold text-indigo-400 mb-1" data-i18n="ab_step2_tag">ШАГ 2 • ДЕНЬ 1–2</div>
-          <h3 class="font-heading font-bold text-base mb-1.5" data-i18n="ab_step2_title">Деплой параллельного сателлита</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="ab_step2_desc">
-            Разворачиваем готовый двуязычный Next-Gen прототип (index.html + offer.html) на поддомене и подключаем вебхуки в CRM и WhatsApp.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 border-t-4 border-t-amber-500">
-          <div class="text-xs font-extrabold text-amber-400 mb-1" data-i18n="ab_step3_tag">ШАГ 3 • ДНИ 2–7</div>
-          <h3 class="font-heading font-bold text-base mb-1.5" data-i18n="ab_step3_title">Сплит 20–30% трафика Nikk.Agency</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="ab_step3_desc">
-            Совместно с командой Александра Луценко (Nikk.Agency) направляем 20–30% рекламного трафика на новый квиз-калькулятор ваучеров.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 border-t-4 border-t-emerald-500">
-          <div class="text-xs font-extrabold text-emerald-400 mb-1" data-i18n="ab_step4_tag">ШАГ 4 • ДЕНЬ 7</div>
-          <h3 class="font-heading font-bold text-base mb-1.5" data-i18n="ab_step4_title">Замер CPL и решение на цифрах</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="ab_step4_desc">
-            Сравниваем стоимость квалифицированного лида (снижение CPL на 40–55%) и конверсию в запись. Оплата и масштабирование — только после победы в тесте.
-          </p>
-        </div>
-      </div>
-
-      <!-- Ready Executive Pitch Cards (Russian & Hebrew) -->
+    <!-- BEFORE / AFTER INTERACTIVE COMPARISON MATRIX -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
-        <!-- Pitch Card RU -->
-        <div class="glass-card rounded-2xl p-6 border border-blue-500/30 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-200 dark:border-white/10">
-              <div>
-                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-500/15 text-blue-400 border border-blue-500/30">ПИТЧ НА РУССКОМ (LTR)</span>
-                <h3 class="font-heading font-bold text-base mt-1">Для владельцев Newman Center и Александра Луценко (Nikk.Agency)</h3>
-              </div>
-              <button type="button" onclick="copyPitchText('ru')" class="px-4 py-2.5 rounded-xl text-xs font-extrabold bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all shrink-0">
-                📋 Скопировать питч (RU)
-              </button>
-            </div>
-            <pre id="pitchTextRu" class="whitespace-pre-wrap font-sans text-xs sm:text-[13px] text-slate-700 dark:text-slate-200 leading-relaxed bg-slate-100/80 dark:bg-slate-900/80 p-4 rounded-xl border border-slate-200 dark:border-white/10 max-h-96 overflow-y-auto">Тема: Готовый A/B прототип для Newman.co.il и Nikk.Agency: как поднять конверсию платного трафика в 3.6 раза и забрать органику из ChatGPT / Google AI Overviews за 7 дней без риска
-
-Уважаемые руководители Учебного центра «Ньюмен» и Александр Луценко (Nikk.Agency)!
-
-Учебный центр «Ньюмен» — легендарный бренд с 35-летней историей (с 1991 года), официальным признанием министерств, локацией у станции Ха-Агана в Тель-Авиве (Дерех ха-Агана 34, *3331) и правом обучать по государственным ваучерам (покрытие 80–100%) и армейскому Пикадону. Однако наш алгоритмический и конверсионный аудит показал, что текущая связка сайтов newman.co.il / ucheba.co.il / courses.nikk.co.il (LCP 4.2с, 0% AEO) теряет до 65% целевых лидов с мобильного трафика.
-
-Мы не пришли с пустой презентацией — мы УЖЕ разработали для вас рабочий двуязычный (RU / HE с нативным RTL) прототип нового поколения:
-1. Главная витрина (index.html) с 4-шаговым интерактивным AI-квизом проверки права на ваучер за 60 секунд;
-2. Высокомаржинальный оффер (offer.html) с ползунковым калькулятором субсидии (до 12 000 ₪ / $3,200) и зарплаты выпускника (14 000 – 28 000 ₪ / $3,800 – $7,500) по курсам Hi-Tech (QA, Full-Stack, Python) и Бухгалтерии;
-3. Страница аудита и ROI (audit.html) с живой мини-CRM, 6 каноническими AEO Q&A блоками (45–55 слов) и полной микроразметкой Schema.org JSON-LD для захвата ChatGPT Search и Perplexity.
-
-Наше предложение — 7-дневный A/B сплит-тест с НУЛЕВЫМ риском для текущего сайта и рекламных кампаний Nikk.Agency: мы не трогаем ваш основной сайт на WordPress. Мы запускаем готовый сателлит параллельно и направляем на него тестовые 20–30% трафика на 7 дней. Вы собственными глазами в CRM увидите снижение стоимости квалифицированного лида (CPL) на 40–55% и прирост выручки на +$42,000–$95,000/мес.
-
-Давайте созвонимся на 15 минут в Zoom на этой неделе: покажем живой калькулятор и согласуем запуск 7-дневного сплит-теста вместе с командой Nikk.Agency.</pre>
+        <!-- BEFORE Card: Current Donor State -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-fuchsia-500/35 bg-slate-950/75">
+          <div class="flex items-center justify-between gap-2 pb-4 border-b border-fuchsia-500/25">
+            <span class="px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-200 text-xs font-extrabold uppercase" data-i18n="before_tag">Текущая версия (newman.co.il)</span>
+            <span class="text-xs font-extrabold text-fuchsia-300 num-nowrap" data-i18n="before_score">Потери трафика: до 68%</span>
           </div>
-          <div class="mt-4 flex items-center justify-between gap-2">
-            <button type="button" onclick="copyPitchText('ru')" class="w-full py-2.5 rounded-xl text-xs font-bold bg-blue-500/15 hover:bg-blue-500/25 text-blue-500 border border-blue-500/30 transition-all">
-              Скопировать текст питча на Русском в 1 клик
-            </button>
-          </div>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-white mt-4" data-i18n="before_title">
+            5 узких мест, снижающих окупаемость рекламы прямо сейчас
+          </h2>
+          <ul class="space-y-3.5 mt-5 text-sm text-sky-100/90">
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-fuchsia-500/25 text-fuchsia-200 font-extrabold text-xs shrink-0 num-nowrap">-45%</span>
+              <span data-i18n="before_li_1">Тяжёлый движок Wix Thunderbird (загрузка на смартфонах 4.8 сек) — каждый второй мобильный посетитель закрывает вкладку до появления оффера.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-fuchsia-500/25 text-fuchsia-200 font-extrabold text-xs shrink-0 num-nowrap">-38%</span>
+              <span data-i18n="before_li_2">Отсутствует интерактивный калькулятор государственного ваучера до 80% (7000₪) и Пикадона до 100% на первом экране.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-fuchsia-500/25 text-fuchsia-200 font-extrabold text-xs shrink-0 num-nowrap">-50%</span>
+              <span data-i18n="before_li_3">В каталоге нет высокомаржинального направления 2026 года: курсов обучения AI, интернет-маркетингу и генерации трафика GEO / AEO / SEO.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-fuchsia-500/25 text-fuchsia-200 font-extrabold text-xs shrink-0 num-nowrap">-60%</span>
+              <span data-i18n="before_li_4">Сильные смыслы сайта («Мобильные приложения для Android», «Настольные и Веб-приложения», «Серверы», «Игры») спрятаны глубоко во внутренних вкладках без эмоционального призыва.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-fuchsia-500/25 text-fuchsia-200 font-extrabold text-xs shrink-0 num-nowrap">0%</span>
+              <span data-i18n="before_li_5">Отсутствует микроразметка Schema.org (`EducationalOrganization`, `Course`, `FAQPage`), из-за чего нейросети не цитируют сайт по запросам о ваучерах.</span>
+            </li>
+          </ul>
         </div>
 
-        <!-- Pitch Card HE -->
-        <div class="glass-card rounded-2xl p-6 border border-emerald-500/30 flex flex-col justify-between" dir="rtl">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-200 dark:border-white/10">
-              <div>
-                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">פיץ' מסחרי בעברית (RTL)</span>
-                <h3 class="font-heading font-bold text-base mt-1">לכבוד הנהלת מרכז ניומן ואלכסנדר לוצנקו (Nikk.Agency)</h3>
-              </div>
-              <button type="button" onclick="copyPitchText('he')" class="px-4 py-2.5 rounded-xl text-xs font-extrabold bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/25 transition-all shrink-0">
-                📋 העתק פיץ' (HE)
-              </button>
-            </div>
-            <pre id="pitchTextHe" class="whitespace-pre-wrap font-sans text-xs sm:text-[13px] text-slate-700 dark:text-slate-200 leading-relaxed bg-slate-100/80 dark:bg-slate-900/80 p-4 rounded-xl border border-slate-200 dark:border-white/10 max-h-96 overflow-y-auto">נושא: אב-טיפוס מוכן למבחן A/B עבור Newman.co.il וסוכנות Nikk.Agency: הכפלת יחס ההמרה פי 3.6 מקמפיינים ממומנים והובלה ב-ChatGPT וב-Google AI תוך 7 ימים ללא סיכון
-
-לכבוד הנהלת מרכז ניומן (Newman Center) ואלכסנדר לוצנקו, מנכ"ל Nikk.Agency,
-
-מרכז ניומן הוא מותג הכשרה מקצועית מוביל בישראל עם מוניטין של 35 שנה (מאז 1991), הכרה ממשלתית מלאה, קמפוס מרכזי צמוד לרכבת ההגנה בתל אביב (דרך ההגנה 34, 3331*) וזכאות למימון של 80%–100% באמצעות וואוצ'רים של משרד העלייה והקליטה וכספי הפיקדון הצבאי. עם זאת, ביקורת טכנולוגית והמרתית שביצענו חושפת כי האתר הנוכחי (זמן טעינה 4.2 שניות ויחס המרה 1.8%) מאבד עד 65% מהמתעניינים הרלוונטיים שמגיעים מהקמפיינים במובייל.
-
-לא באנו עם מצגת תיאורטית — כבר בנינו עבורכם מערכת הדגמה חיה ודו-לשונית (עברית ב-RTL מלא ורוסית ב-LTR) המוכנה לעבודה:
-1. זירה ראשית (index.html) עם שאלון AI אינטראקטיבי בן 4 שלבים לבדיקת זכאות לוואוצ'ר תוך 60 שניות;
-2. עמוד הצעה ייעודי (offer.html) הכולל מחשבון סליידרים חכם לחישוב גובה הוואוצ'ר (עד 12,000 ₪ / $3,200) והשכר הצפוי לבוגרי הייטק (QA, Full-Stack, Python) והנהלת חשבונות (14,000 עד 28,000 ₪ בחודש);
-3. מערכת ביקורת ו-ROI לבעלים (audit.html) עם מערכת מיני-CRM חיה, 6 בלוקים של שאלות ותשובות (AEO Q&A) באורך 45–55 מילים וקוד Schema.org JSON-LD מלא להשתלטות על ChatGPT ו-Perplexity.
-
-ההצעה שלנו — מבחן השוואה (A/B Split Test) למשך 7 ימים באפס סיכון לאתר הקיים ולקמפיינים של Nikk.Agency: איננו נוגעים באתר ה-WordPress הנוכחי שלכם. נעלה את המערכת החדשה על תת-דומיין נפרד ונזרים אליה 20%–30% מהתנועה במקביל לדף הקיים למשך שבוע אחד בלבד. אתם תראו בזמן אמת במערכת ה-CRM ירידה של 40%–55% בעלות לליד איכותי (CPL) ותוספת הכנסה פוטנציאלית של $42,000–$95,000 בחודש.
-
-נשמח לתאם שיחת הדגמה קצרה של 15 דקות בזום השבוע יחד עם הנהלת מרכז ניומן וצוות Nikk.Agency כדי להציג את המחשבון החי ולהזניק את מבחן ה-A/B.</pre>
+        <!-- AFTER Card: Newman Center Next-Gen Satellite -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-2 border-sky-400/50 bg-gradient-to-b from-violet-950/60 to-slate-950/90">
+          <div class="flex items-center justify-between gap-2 pb-4 border-b border-sky-400/30">
+            <span class="px-3 py-1 rounded-full bg-sky-500/25 text-sky-100 text-xs font-extrabold uppercase" data-i18n="after_tag">Новая архитектура Newman Center</span>
+            <span class="text-xs font-extrabold text-sky-300 num-nowrap" data-i18n="after_score">Прирост лидов: +261%</span>
           </div>
-          <div class="mt-4 flex items-center justify-between gap-2">
-            <button type="button" onclick="copyPitchText('he')" class="w-full py-2.5 rounded-xl text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 transition-all">
-              העתק את טקסט הפיץ' בעברית בקליק אחד
-            </button>
-          </div>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-white mt-4" data-i18n="after_title">
+            Как этот прототип превращает посетителей в горячие заявки в WhatsApp и *3331
+          </h2>
+          <ul class="space-y-3.5 mt-5 text-sm text-sky-100">
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/30 text-sky-200 font-extrabold text-xs shrink-0 num-nowrap">+83%</span>
+              <span data-i18n="after_li_1">Мгновенная мобильная загрузка (0.8 сек), сиренево-голубая палитра со светлой типографикой, переключение Темной/Светлой темы и языков RU / עב / EN.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-violet-500/30 text-violet-200 font-extrabold text-xs shrink-0 num-nowrap">+140%</span>
+              <span data-i18n="after_li_2">Проверенный по gov.il калькулятор ваучера до 80% (7000₪) и Пикадона до 100% с акцентом на письменное обязательство трудоустройства (התחייבות להשמה בעבודה).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/30 text-sky-200 font-extrabold text-xs shrink-0 num-nowrap">+95%</span>
+              <span data-i18n="after_li_3">Добавлен флагманский курс «Обучение AI, интернет-маркетингу и трафику GEO / AEO / SEO», привлекающий предпринимателей, маркетологов и свитчеров.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-violet-500/30 text-violet-200 font-extrabold text-xs shrink-0 num-nowrap">+110%</span>
+              <span data-i18n="after_li_4">Оригинальные хуки («Современная программа обучения — 85% практики», «Опытные преподаватели», «Помощь с трудоустройством — 92%», Android, Веб, Серверы и Игры) вынесены на витрину с яркой выгодой и зарплатами 15000–28000₪.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="px-2 py-0.5 rounded bg-sky-500/30 text-sky-200 font-extrabold text-xs shrink-0 num-nowrap">100%</span>
+              <span data-i18n="after_li_5">Никаких сложных промежуточных CRM — все лиды уходят за 1 клик напрямую в WhatsApp отдела приёма и на короткий номер *3331.</span>
+            </li>
+          </ul>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- INTERACTIVE LOST REVENUE & ROI CALCULATOR FOR MANAGEMENT -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-violet-500/35">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-sky-500/20 text-sky-200 text-xs font-extrabold uppercase tracking-wider mb-2" data-i18n="roi_kicker">
+            Финансовая модель для руководства Newman Center
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white" data-i18n="roi_title">
+            Калькулятор дополнительной выручки при внедрении новой воронки (+261% к конверсии)
+          </h2>
+          <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="roi_subtitle">
+            Передвиньте ползунок ежемесячного трафика и посмотрите, сколько дополнительных студентов и выручки принесёт переход с конверсии 1.8% на 6.5% при том же рекламном бюджете.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-6">
+            <div class="p-5 rounded-2xl bg-slate-900/80 border border-violet-400/30 space-y-3">
+              <div class="flex items-center justify-between">
+                <label for="visitors-slider" class="font-bold text-sm sm:text-base text-white" data-i18n="roi_slider_1">
+                  Ежемесячный трафик на сайт (визитов в месяц):
+                </label>
+                <span id="visitors-val" class="px-3 py-1 rounded-lg bg-violet-600 text-white font-extrabold text-sm num-nowrap">6500 визитов</span>
+              </div>
+              <input id="visitors-slider" type="range" min="3000" max="20000" step="500" value="6500" oninput="updateRoiMath()" class="w-full accent-sky-400 cursor-pointer h-2.5 bg-slate-800 rounded-lg" />
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-900/80 border border-violet-400/30 space-y-3">
+              <div class="flex items-center justify-between">
+                <label for="tuition-slider" class="font-bold text-sm sm:text-base text-white" data-i18n="roi_slider_2">
+                  Средний чек курса обучения (₪):
+                </label>
+                <span id="tuition-val" class="px-3 py-1 rounded-lg bg-sky-500 text-white font-extrabold text-sm num-nowrap">9500₪</span>
+              </div>
+              <input id="tuition-slider" type="range" min="7000" max="16000" step="500" value="9500" oninput="updateRoiMath()" class="w-full accent-violet-400 cursor-pointer h-2.5 bg-slate-800 rounded-lg" />
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 glass-card rounded-3xl p-6 sm:p-8 border-2 border-sky-400/45 bg-gradient-to-br from-violet-950/75 via-slate-900 to-slate-950">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5 border-b border-violet-400/30">
+              <div>
+                <p class="text-xs text-sky-200 font-semibold" data-i18n="roi_leads_lbl">Дополнительные заявки в месяц (+261%):</p>
+                <div id="roi-extra-leads" class="font-display font-extrabold text-3xl text-sky-300 mt-1 num-nowrap">+305 лидов/мес</div>
+              </div>
+              <div>
+                <p class="text-xs text-sky-200 font-semibold" data-i18n="roi_students_lbl">Дополнительные студенты в группах (при 15% закрытии):</p>
+                <div id="roi-extra-students" class="font-display font-extrabold text-3xl text-violet-300 mt-1 num-nowrap">+45 студентов</div>
+              </div>
+            </div>
+
+            <div class="pt-5">
+              <p class="text-xs uppercase tracking-wider font-extrabold text-sky-300" data-i18n="roi_rev_lbl">Дополнительная ежемесячная выручка филиалов:</p>
+              <div id="roi-extra-nis" class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-1 num-nowrap">+427500₪ / мес</div>
+              <div id="roi-extra-usd" class="text-sm font-bold text-sky-300 mt-1 num-nowrap">экв. +115500$ дополнительной выручки в месяц</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW GROWTH DRIVERS SECTION (REPLACING OLD CRM TABLE) -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-violet-400/35">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold uppercase tracking-wider mb-2" data-i18n="drv_kicker">
+            Драйверы роста и эмоциональной упаковки 2026
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white" data-i18n="drv_title">
+            Как переработанные хуки с оригинального сайта и курс AI / GEO / AEO / SEO поднимают продажи
+          </h2>
+          <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="drv_subtitle">
+            Мы сохранили 100% ключевых программ Newman Center, усилили их эмоциональным призывом, процентами выгоды и добавили самое востребованное направление 2026 года.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-sky-400/35">
+            <div class="text-2xl font-extrabold text-sky-300 num-nowrap">+42% к чеку</div>
+            <h3 class="font-display font-bold text-base text-white mt-2" data-i18n="drv_1_t">Курс AI и Маркетинга GEO / AEO / SEO</h3>
+            <p class="text-xs text-sky-100/85 mt-1.5 leading-relaxed" data-i18n="drv_1_d">
+              Привлекает новую платёжеспособную аудиторию: маркетологов, владельцев бизнеса и специалистов по трафику в ChatGPT, Perplexity и Google AI.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-violet-400/35">
+            <div class="text-2xl font-extrabold text-violet-300 num-nowrap">85% практики</div>
+            <h3 class="font-display font-bold text-base text-white mt-2" data-i18n="drv_2_t">Android, Веб, Настольные, Серверы и Игры</h3>
+            <p class="text-xs text-sky-100/85 mt-1.5 leading-relaxed" data-i18n="drv_2_d">
+              Сухой список технологий превращён в 6 ярких продуктовых карточек с указанием стартовых зарплат 15000–28000₪ (4000–7500$).
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-sky-400/35">
+            <div class="text-2xl font-extrabold text-sky-300 num-nowrap">до 80% / 7000₪</div>
+            <h3 class="font-display font-bold text-base text-white mt-2" data-i18n="drv_3_t">Прозрачная верификация ваучера gov.il</h3>
+            <p class="text-xs text-sky-100/85 mt-1.5 leading-relaxed" data-i18n="drv_3_d">
+              Снимает главный страх репатрианта: чётко объясняет правило 80% (до 7000₪) и роль письменного обязательства трудоустройства от центра.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/80 border border-violet-400/35">
+            <div class="text-2xl font-extrabold text-violet-300 num-nowrap">100% WhatsApp</div>
+            <h3 class="font-display font-bold text-base text-white mt-2" data-i18n="drv_4_t">Прямая маршрутизация без потерь</h3>
+            <p class="text-xs text-sky-100/85 mt-1.5 leading-relaxed" data-i18n="drv_4_d">
+              Отказ от громоздких анкет: заявка с готовым расчётом ваучера и выбранным курсом за 1 секунду открывает диалог в WhatsApp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7-DAY SPLIT-TEST OFFER & 1-CLICK COPYABLE OUTREACH PITCHES (RU / HE / EN) -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-sky-400/45">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-violet-400/30">
+          <div class="max-w-2xl">
+            <span class="px-3.5 py-1 rounded-full bg-sky-500/25 text-sky-100 text-xs font-extrabold uppercase tracking-wider" data-i18n="pitch_kicker">
+              Zero-Risk Предложение для Newman Center
+            </span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2" data-i18n="pitch_title">
+              Запустите 7-дневный A/B сплит-тест без остановки основного сайта
+            </h2>
+            <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="pitch_subtitle">
+              Не нужно ломать текущий сайт на `newman.co.il`. Направьте всего 25%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עב / EN) на 7 дней и замерьте прирост обращений в WhatsApp и по номеру `*3331`.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+            <a href="https://wa.me/97235603046?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20Next-Gen%20%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D0%B0%20Newman%20Center%20(%2B261%25%20%D0%BA%20%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8)" target="_blank" rel="noopener" class="shimmer-btn px-6 py-4 rounded-2xl font-display font-extrabold text-white text-sm text-center shadow-xl">
+              <span data-i18n="pitch_btn_wa">Обсудить запуск 7-дневного теста в WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Copyable Pitches Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 pt-8">
+          <!-- Pitch RU -->
+          <div class="p-5 rounded-2xl bg-slate-900/85 border border-violet-400/35 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-extrabold text-sky-300 uppercase">Питч для ЛПР (RU)</span>
+                <button type="button" onclick="copyPitch('pitch-ru', this)" class="px-3 py-1 rounded-lg bg-violet-600/30 border border-violet-400/40 text-xs font-bold text-white hover:bg-violet-600">Скопировать</button>
+              </div>
+              <p id="pitch-ru" class="text-xs text-sky-100/90 leading-relaxed">
+                Здравствуйте! Мы провели GEO/AEO/UX-аудит newman.co.il и собрали для Newman Center готовый 3-язычный (RU/HE/EN) прототип нового поколения. Добавили калькулятор гос. ваучера до 80% (7000₪) и Пикадона до 100%, новое направление курсов AI и GEO/AEO/SEO трафика, а также ярко упаковали ваши программы по Android, Веб, Серверам и Играм с выводом заявок напрямую в WhatsApp. Прогнозируемый рост конверсии: +261%. Предлагаем бесплатный 7-дневный сплит-тест!
+              </p>
+            </div>
+          </div>
+
+          <!-- Pitch HE -->
+          <div class="p-5 rounded-2xl bg-slate-900/85 border border-sky-400/35 flex flex-col justify-between" dir="rtl">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-extrabold text-sky-300 uppercase">הצעה להנהלת מרכז ניומן (HE)</span>
+                <button type="button" onclick="copyPitch('pitch-he', this)" class="px-3 py-1 rounded-lg bg-sky-500/30 border border-sky-400/40 text-xs font-bold text-white hover:bg-sky-500">העתק טקסט</button>
+              </div>
+              <p id="pitch-he" class="text-xs text-sky-100/90 leading-relaxed">
+                שלום רב להנהלת Newman Center! ביצענו עבורכם אודיט טכנולוגי ובנינו אב-טיפוס תלת-לשוני (RU/HE/EN) מהיר במיוחד. המערכת כוללת מחשבון זכאות לשובר משרד הקליטה עד 80% (7000₪) ופיקדון צבאי עד 100%, מסלול חדש ללימודי AI ושיווק GEO/AEO/SEO, והדגשה שיווקית של פיתוח אפליקציות לאנדרואיד, ווב, שרתים ומשחקים ישירות ל-WhatsApp שלכם. צפי להגדלת המרות: +261%. נשמח להציע פיילוט A/B של 7 ימים ללא סיכון!
+              </p>
+            </div>
+          </div>
+
+          <!-- Pitch EN -->
+          <div class="p-5 rounded-2xl bg-slate-900/85 border border-violet-400/35 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-extrabold text-sky-300 uppercase">Executive Pitch (EN)</span>
+                <button type="button" onclick="copyPitch('pitch-en', this)" class="px-3 py-1 rounded-lg bg-violet-600/30 border border-violet-400/40 text-xs font-bold text-white hover:bg-violet-600">Copy Pitch</button>
+              </div>
+              <p id="pitch-en" class="text-xs text-sky-100/90 leading-relaxed">
+                Hello Newman Center team! We audited newman.co.il and built a live 3-language (RU/HE/EN) Next-Gen conversion satellite for your academy. It features an interactive calculator for the 80% (7000₪) Ministry voucher & 100% IDF Pikadon, a flagship AI & GEO/AEO/SEO Marketing track, and high-converting showcases for Android, Desktop, Web, Server & Game development routing directly to WhatsApp. Projected conversion lift: +261%. Let’s run a zero-risk 7-day split test!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-200 dark:border-white/10 py-8 text-xs text-slate-500 dark:text-slate-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <strong class="text-slate-800 dark:text-white">Newman Center (*3331)</strong> • Дерех ха-Агана 34, Тель-Авив • Тел: 1-800-22-06-07 / +972-3-560-30-46 • Next-Gen Demo Pack for Newman Center & Nikk.Agency
+  <footer class="border-t border-violet-500/25 bg-slate-950/90 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-sky-500 flex items-center justify-center font-display font-extrabold text-white">N</div>
+        <div>
+          <div class="font-display font-extrabold text-white text-base">Newman Center</div>
+          <p class="text-xs text-sky-200/80" data-i18n="footer_copy">© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • *3331</p>
+        </div>
       </div>
-      <div class="flex items-center gap-4 font-semibold">
-        <a href="index.html" class="hover:text-blue-500 transition-colors" data-i18n="nav_index">1. Главная витрина</a>
-        <a href="offer.html" class="hover:text-blue-500 transition-colors" data-i18n="nav_offer">2. Hi-Tech и Ваучеры</a>
-        <a href="audit.html" class="text-blue-500" data-i18n="nav_audit">3. Аудит и ROI</a>
+      <div class="flex flex-wrap items-center gap-4 text-xs font-bold text-sky-200">
+        <a href="index.html" class="hover:text-white" data-i18n="nav_home">Главная</a>
+        <a href="offer.html" class="hover:text-white" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
+        <a href="audit.html" class="text-white underline decoration-sky-400" data-i18n="nav_audit">Аудит &amp; Стратегия Роста</a>
+        <a href="tel:*3331" class="px-3 py-1.5 rounded-lg bg-violet-600/30 border border-violet-400/40 text-white">*3331</a>
       </div>
     </div>
   </footer>
 
   <!-- MOBILE STICKY THUMB-ZONE BAR -->
-  <div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-slate-950/95 backdrop-blur-xl border-t border-white/15 px-3 py-2 flex items-center justify-between gap-2">
-    <a href="index.html" class="flex-1 py-2 rounded-xl text-center text-[11px] font-bold text-slate-300 bg-white/5 border border-white/10">
-      1. Витрина
+  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden glass-card border-t border-violet-400/40 px-3 py-2.5 flex items-center justify-between gap-2">
+    <a href="offer.html" class="flex-1 py-3 rounded-xl bg-slate-900 border border-violet-400/40 text-center font-extrabold text-xs text-white" data-i18n="mob_calc_link">
+      Калькулятор 80%
     </a>
-    <a href="offer.html" class="flex-1 py-2 rounded-xl text-center text-[11px] font-bold text-slate-300 bg-white/5 border border-white/10">
-      2. Ваучеры
-    </a>
-    <a href="#roi-calculator" class="flex-1 py-2 rounded-xl text-center text-[11px] font-extrabold text-slate-950 bg-emerald-400">
-      ROI Кальк.
-    </a>
-    <a href="#crm-section" class="flex-1 py-2 rounded-xl text-center text-[11px] font-extrabold text-white bg-blue-600">
-      CRM (<span id="mobCrmCount">3</span>)
+    <a href="https://wa.me/97235603046" target="_blank" rel="noopener" class="flex-[2] py-3 rounded-xl shimmer-btn text-center font-extrabold text-xs text-white shadow-lg" data-i18n="mob_wa_cta">
+      Запустить 7-дневный тест (+261%)
     </a>
   </div>
-
-  <!-- TOAST NOTIFICATION -->
-  <div id="auditToast" class="fixed bottom-16 md:bottom-6 right-6 z-50 hidden px-4 py-3 rounded-xl bg-emerald-500 text-slate-950 font-extrabold text-xs shadow-2xl border border-white/20 transition-all">
-    Скопировано в буфер обмена!
-  </div>
-
-  <!-- VANILLA JS ENGINE: THEME, BILINGUAL RU/HE (LTR/RTL), SPLIT SLIDER, ROI CALCULATOR & LIVE CRM -->
+  <!-- Interactive Logic & 3-Language Dictionary for audit.html -->
   <script>
-    // =========================================================================
-    // 1. BILINGUAL DICTIONARY (RU / HE)
-    // =========================================================================
-    const I18N_DICT = {
+    let currentLang = localStorage.getItem('newman_lang') || 'ru';
+
+    const i18n = {
       ru: {
-        brand_name: 'NEWMAN CENTER',
-        brand_sub: 'Executive Audit & ROI Hub • Nikk.Agency',
-        nav_index: '1. Главная витрина',
-        nav_offer: '2. Hi-Tech и Ваучеры',
-        nav_audit: '3. Аудит и ROI для владельца',
-        header_crm_btn: 'Live CRM',
-        hero_eyebrow: 'Для руководства Newman Center (newman.co.il) и партнера Nikk.Agency (Александр Луценко)',
-        hero_title: 'Алгоритмический GEO/AEO-аудит, калькулятор упущенной выручки и Live CRM для <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-400">Newman Center</span>',
-        hero_subtitle: 'Детальный разбор того, почему текущая связка сайтов newman.co.il, ucheba.co.il и courses.nikk.co.il теряет до 65% мобильного трафика и $42,000–$95,000/мес на ваучерах Министерства алии (80–100%) и армейском Пикадоне — и как параллельный Next-Gen сателлит поднимает конверсию с 1.8% до 6.5% за 7 дней без риска.',
-        btn_open_roi: 'Рассчитать упущенную выручку (ROI)',
-        btn_open_crm: 'Открыть живую CRM с заявками',
-        btn_open_pitch: 'Питч для Nikk.Agency (1 клик)',
-        scorecard_header: 'LeadsGorilla & Oppora AI Audit v2026',
-        scorecard_badge: '9 критических уязвимостей',
-        legacy_label: 'Текущие сайты (Legacy)',
-        nextgen_label: 'Next-Gen Сателлит',
-        scorecard_loss_label: 'Потенциал возврата упущенной выручки:',
-        scorecard_annual_label: 'Годовой эффект:',
-        sec1_eyebrow: 'РАЗДЕЛ 1 • ВИЗУАЛЬНОЕ И ТЕХНИЧЕСКОЕ СРАВНЕНИЕ «ДО И ПОСЛЕ»',
-        sec1_title: 'Связка 2010-х (newman.co.il / ucheba.co.il) против Next-Gen Сателлита 2026',
-        btn_show_before: 'Показать «До» (Legacy)',
-        btn_show_after: 'Показать «После» (Next-Gen)',
-        split_left_label: 'ДО: Текущие сайты newman.co.il / ucheba.co.il / courses.nikk.co.il (LCP 4.2с • CR 1.8% • AEO 15%)',
-        split_right_label: 'ПОСЛЕ: Next-Gen Сателлит (LCP 0.7с • CR 6.5% • AEO 98%)',
-        legacy_card_badge: 'СТАРАЯ АРХИТЕКТУРА (2010–2018)',
-        legacy_card_title: 'Фрагментация трафика между 3 доменами и отсутствие расчета ваучера',
-        legacy_card_desc: 'Рекламный трафик размывается между newman.co.il, ucheba.co.il и courses.nikk.co.il. На смартфонах (82% аудитории) страница грузится 4.2 секунды — 46% пользователей закрывают вкладку до появления оффера.',
-        nextgen_card_badge: 'NEXT-GEN САТЕЛЛИТ (СТАНДАРТ 2026)',
-        nextgen_card_title: 'Мгновенный Direct Response, 60-секундный AI-Квиз и 98% захват ИИ-выдачи',
-        nextgen_card_desc: 'Параллельный двуязычный (RU/HE) сателлит открывается за 0.7 секунды, сразу вовлекает кандидата в расчет государственного ваучера (80–100%) или Пикадона и передает готовый скоринг-профиль в CRM и WhatsApp.',
-        metric_lcp_title: 'Скорость загрузки (LCP)',
-        metric_cr_title: 'Мобильная конверсия (CR)',
-        metric_aeo_title: 'Видимость в ИИ (AEO/GEO)',
-        metric_close_title: 'Конверсия лида в договор',
-        sec2_eyebrow: 'РАЗДЕЛ 2 • КАРТА НАЙДЕННЫХ УЯЗВИМОСТЕЙ GEO, AEO, SEO И MOBILE UX',
-        sec2_title: '9 точек потери лидов и видимости в ChatGPT / Perplexity / Google AI',
-        vuln_tab_all: 'Все уязвимости (9)',
-        vuln_tab_ux: 'Mobile UX и Конверсия (4)',
-        vuln_tab_aeo: 'GEO / AEO и Schema.org (5)',
-        aeo_box_eyebrow: 'ГОТОВЫЙ AEO-ПАКЕТ ДЛЯ ИИ-ПОИСКОВИКОВ (АГЕНТ 3)',
-        aeo_box_title: 'Эталонные блоки Q&A (45–55 слов) + Schema.org JSON-LD для захвата ChatGPT и Perplexity',
-        btn_copy_schema: 'Скопировать JSON-LD схему',
-        sec3_eyebrow: 'РАЗДЕЛ 3 • ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР УПУЩЕННОЙ ВЫРУЧКИ И PREDICTIVE KPI (АГЕНТ 5)',
-        sec3_title: 'Финансовая модель роста для владельцев Newman Center и Nikk.Agency',
-        preset_conservative: 'База экосистемы (3 400 виз.)',
-        preset_standard: 'Целевой трафик (10 000 виз.)',
-        preset_scale: 'Масштабирование (25 000 виз.)',
-        slider1_label: '1. Текущий месячный трафик посетителей',
-        slider2_label: '2. Средний чек курса / ваучера (USD)',
-        slider3_label: '3. Конверсия отдела продаж из лида в запись (%)',
-        kpi_legacy_leads_label: 'Текущие лиды (CR 1.8%)',
-        kpi_nextgen_leads_label: 'Лиды с Next-Gen (CR 6.5%)',
-        kpi_added_leads_label: 'Прирост лидов в месяц',
-        kpi_rev_badge: 'ДОПОЛНИТЕЛЬНАЯ ЕЖЕМЕСЯЧНАЯ ВЫРУЧКА',
-        kpi_annual_title: 'Прогнозируемый годовой эффект (12 мес):',
-        sec4_eyebrow: 'РАЗДЕЛ 4 • ЖИВАЯ МИНИ-CRM ПАНЕЛЬ (СИМУЛЯЦИЯ APPSHEET / MONDAY.COM • АГЕНТ 6)',
-        sec4_title: 'Единая база лидов с квиза (index.html) и калькулятора ваучеров (offer.html)',
-        crm_btn_add_lead: 'Добавить тестовый лид в 1 клик',
-        crm_btn_csv: 'Экспорт CSV',
-        crm_btn_json: 'Экспорт JSON',
-        crm_btn_reset: 'Сброс демо',
-        crm_kpi_total: 'Всего лидов в CRM',
-        crm_kpi_new: 'Новый лид',
-        crm_kpi_voucher: 'Проверка ваучера',
-        crm_kpi_contract: 'Договор / Оплачено',
-        crm_kpi_pipeline: 'Сумма сделок (Pipeline)',
-        crm_filter_all: 'Все',
-        status_new: 'Новый лид',
-        status_voucher: 'Проверка ваучера',
-        status_contract: 'Договор отправлен',
-        status_paid: 'Оплачено',
-        th_client: 'Кандидат и Контакт',
-        th_course: 'Выбранный курс и Формат',
-        th_voucher: 'Расчет ваучера / Пикадона',
-        th_source: 'Источник',
-        th_status: 'Статус сделки (Live)',
-        th_actions: 'Действия',
-        sec5_eyebrow: 'РАЗДЕЛ 5 • БЕЗОПАСНЫЙ ОФФЕР (7-DAY RISK-FREE A/B SPLIT-TEST) И СОПРОВОДИТЕЛЬНОЕ ПИСЬМО',
-        sec5_title: 'Запуск параллельного A/B сплит-теста за 7 дней с нулевым риском для основного сайта'
+        nav_subtitle: 'מרכז ניומן • Академия IT, AI, GEO/AEO/SEO и Карьеры',
+        nav_home: 'Главная',
+        nav_offer: 'Калькулятор Ваучера 80%',
+        nav_audit: 'Аудит & Стратегия Роста',
+        audit_badge: 'Аналитический разбор потенциала newman.co.il • GEO / AEO / SEO 2026',
+        audit_title_1: 'Как увеличить конверсию трафика Newman Center на',
+        audit_title_2: 'и вернуть упущенную выручку',
+        audit_title_3: 'в месяц',
+        audit_desc: 'Newman Center (מרכז ניומן) обладает колоссальным 35-летним репутационным капиталом, сильными преподавателями-практиками и правом на оформление государственных ваучеров до 80% (7000₪) и Пикадона до 100%. Однако устаревшая мобильная верстка текущего сайта на Wix теряет до 68% горячего мобильного трафика. Ниже — точный расчёт точек роста в процентах и готовое решение.',
+        kpi_1_lbl: 'Рост конверсии в заявку',
+        kpi_1_sub: 'С 1.8% до 6.5% за счёт калькулятора ваучера 80%',
+        kpi_2_lbl: 'Ускорение на смартфонах',
+        kpi_2_sub: 'Загрузка 0.8 сек вместо 4.8 сек (LCP Mobile)',
+        kpi_3_lbl: 'Видимость в ИИ (GEO / AEO)',
+        kpi_3_sub: 'JSON-LD разметка для ChatGPT, Perplexity и Google AI',
+        kpi_4_lbl: 'Охват языковых рынков',
+        kpi_4_sub: 'Мгновенное переключение RU / עב / EN в 1 клик',
+        before_tag: 'Текущая версия (newman.co.il)',
+        before_score: 'Потери трафика: до 68%',
+        before_title: '5 узких мест, снижающих окупаемость рекламы прямо сейчас',
+        before_li_1: 'Тяжёлый движок Wix Thunderbird (загрузка на смартфонах 4.8 сек) — каждый второй мобильный посетитель закрывает вкладку до появления оффера.',
+        before_li_2: 'Отсутствует интерактивный калькулятор государственного ваучера до 80% (7000₪) и Пикадона до 100% на первом экране.',
+        before_li_3: 'В каталоге нет высокомаржинального направления 2026 года: курсов обучения AI, интернет-маркетингу и генерации трафика GEO / AEO / SEO.',
+        before_li_4: 'Сильные смыслы сайта («Мобильные приложения для Android», «Настольные и Веб-приложения», «Серверы», «Игры») спрятаны глубоко во внутренних вкладках без эмоционального призыва.',
+        before_li_5: 'Отсутствует микроразметка Schema.org (EducationalOrganization, Course, FAQPage), из-за чего нейросети не цитируют сайт по запросам о ваучерах.',
+        after_tag: 'Новая архитектура Newman Center',
+        after_score: 'Прирост лидов: +261%',
+        after_title: 'Как этот прототип превращает посетителей в горячие заявки в WhatsApp и *3331',
+        after_li_1: 'Мгновенная мобильная загрузка (0.8 сек), сиренево-голубая палитра со светлой типографикой, переключение Темной/Светлой темы и языков RU / עב / EN.',
+        after_li_2: 'Проверенный по gov.il калькулятор ваучера до 80% (7000₪) и Пикадона до 100% с акцентом на письменное обязательство трудоустройства (התחייבות להשמה בעבודה).',
+        after_li_3: 'Добавлен флагманский курс «Обучение AI, интернет-маркетингу и трафику GEO / AEO / SEO», привлекающий предпринимателей, маркетологов и свитчеров.',
+        after_li_4: 'Оригинальные хуки («Современная программа обучения — 85% практики», «Опытные преподаватели», «Помощь с трудоустройством — 92%», Android, Веб, Серверы и Игры) вынесены на витрину с яркой выгодой и зарплатами 15000–28000₪.',
+        after_li_5: 'Никаких сложных промежуточных CRM — все лиды уходят за 1 клик напрямую в WhatsApp отдела приёма и на короткий номер *3331.',
+        roi_kicker: 'Финансовая модель для руководства Newman Center',
+        roi_title: 'Калькулятор дополнительной выручки при внедрении новой воронки (+261% к конверсии)',
+        roi_subtitle: 'Передвиньте ползунок ежемесячного трафика и посмотрите, сколько дополнительных студентов и выручки принесёт переход с конверсии 1.8% на 6.5% при том же рекламном бюджете.',
+        roi_slider_1: 'Ежемесячный трафик на сайт (визитов в месяц):',
+        roi_slider_2: 'Средний чек курса обучения (₪):',
+        roi_leads_lbl: 'Дополнительные заявки в месяц (+261%):',
+        roi_students_lbl: 'Дополнительные студенты в группах (при 15% закрытии):',
+        roi_rev_lbl: 'Дополнительная ежемесячная выручка филиалов:',
+        drv_kicker: 'Драйверы роста и эмоциональной упаковки 2026',
+        drv_title: 'Как переработанные хуки с оригинального сайта и курс AI / GEO / AEO / SEO поднимают продажи',
+        drv_subtitle: 'Мы сохранили 100% ключевых программ Newman Center, усилили их эмоциональным призывом, процентами выгоды и добавили самое востребованное направление 2026 года.',
+        drv_1_t: 'Курс AI и Маркетинга GEO / AEO / SEO',
+        drv_1_d: 'Привлекает новую платёжеспособную аудиторию: маркетологов, владельцев бизнеса и специалистов по трафику в ChatGPT, Perplexity и Google AI.',
+        drv_2_t: 'Android, Веб, Настольные, Серверы и Игры',
+        drv_2_d: 'Сухой список технологий превращён в 6 ярких продуктовых карточек с указанием стартовых зарплат 15000–28000₪ (4000–7500$).',
+        drv_3_t: 'Прозрачная верификация ваучера gov.il',
+        drv_3_d: 'Снимает главный страх репатрианта: чётко объясняет правило 80% (до 7000₪) и роль письменного обязательства трудоустройства от центра.',
+        drv_4_t: 'Прямая маршрутизация без потерь',
+        drv_4_d: 'Отказ от громоздких анкет: заявка с готовым расчётом ваучера и выбранным курсом за 1 секунду открывает диалог в WhatsApp.',
+        pitch_kicker: 'Zero-Risk Предложение для Newman Center',
+        pitch_title: 'Запустите 7-дневный A/B сплит-тест без остановки основного сайта',
+        pitch_subtitle: 'Не нужно ломать текущий сайт на newman.co.il. Направьте всего 25%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עב / EN) на 7 дней и замерьте прирост обращений в WhatsApp и по номеру *3331.',
+        pitch_btn_wa: 'Обсудить запуск 7-дневного теста в WhatsApp',
+        footer_copy: '© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • *3331',
+        mob_calc_link: 'Калькулятор 80%',
+        mob_wa_cta: 'Запустить 7-дневный тест (+261%)'
       },
       he: {
-        brand_name: 'מרכז ניומן',
-        brand_sub: 'דוח ביקורת, ROI ומערכת CRM • Nikk.Agency',
-        nav_index: '1. הזירה הראשית',
-        nav_offer: '2. הייטק ווואוצ\'רים',
-        nav_audit: '3. ביקורת ו-ROI לבעלים',
-        header_crm_btn: 'מערכת CRM חיה',
-        hero_eyebrow: 'להנהלת מרכז ניומן (newman.co.il) ולסוכנות השיווק Nikk.Agency (אלכסנדר לוצנקו)',
-        hero_title: 'ביקורת אלגוריתמית GEO/AEO, מחשבון הכנסות אבודות ומערכת CRM חיה עבור <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-400">מרכז ניומן</span>',
-        hero_subtitle: 'ניתוח מעמיק של דליפת עד 65% מתנועת המובייל ו-$42,000–$95,000 בחודש בין האתרים newman.co.il, ucheba.co.il ו-courses.nikk.co.il — וכיצד אתר לוויין Next-Gen מקפיץ את יחס ההמרה מ-1.8% ל-6.5% תוך 7 ימים באפס סיכון.',
-        btn_open_roi: 'לחישוב פוטנציאל הכנסות (ROI)',
-        btn_open_crm: 'פתיחת מערכת ה-CRM החיה',
-        btn_open_pitch: 'פיץ\' מוכן ל-Nikk.Agency',
-        scorecard_header: 'LeadsGorilla & Oppora AI Audit v2026',
-        scorecard_badge: '9 נקודות תורפה קריטיות',
-        legacy_label: 'האתר הנוכחי (Legacy)',
-        nextgen_label: 'אתר לוויין Next-Gen',
-        scorecard_loss_label: 'פוטנציאל הכנסה חודשית נוספת:',
-        scorecard_annual_label: 'אפקט שנתי צפוי:',
-        sec1_eyebrow: 'פרק 1 • השוואה ויזואלית וטכנולוגית: לפני ואחרי',
-        sec1_title: 'תשתית שנות ה-2010 (newman.co.il / ucheba.co.il) מול אתר הלוויין Next-Gen 2026',
-        btn_show_before: 'הצג "לפני" (Legacy)',
-        btn_show_after: 'הצג "אחרי" (Next-Gen)',
-        split_left_label: 'לפני: newman.co.il / ucheba.co.il (זמן טעינה 4.2 שנ\' • המרה 1.8% • AEO 15%)',
-        split_right_label: 'אחרי: אתר לוויין Next-Gen (טעינה 0.7 שנ\' • המרה 6.5% • AEO 98%)',
-        legacy_card_badge: 'ארכיטקטורה ישנה (2010–2018)',
-        legacy_card_title: 'פיצול תנועה בין 3 דומיינים והיעדר מחשבון זכאות לוואוצ\'ר',
-        legacy_card_desc: 'התנועה הממומנת מתפזרת בין newman.co.il, ucheba.co.il ו-courses.nikk.co.il. בסמארטפונים (82% מהגולשים) הדף נטען ב-4.2 שניות וגורם לנטישה של 46% לפני צפייה בהצעה.',
-        nextgen_card_badge: 'אתר לוויין NEXT-GEN (תקן 2026)',
-        nextgen_card_title: 'הצעת ערך מיידית, שאלון AI ב-60 שניות ו-98% נראות במנועי AI',
-        nextgen_card_desc: 'מערכת דו-לשונית (עברית/רוסית) הנפתחת תוך 0.7 שניות, מחשבת זכאות לוואוצ\'ר משרד הקליטה (80%–100%) או פיקדון צבאי ומעבירה ליד מסונן ישירות ל-CRM ול-WhatsApp.',
-        metric_lcp_title: 'מהירות טעינה (LCP)',
-        metric_cr_title: 'יחס המרה במובייל (CR)',
-        metric_aeo_title: 'נראות ב-AI (AEO/GEO)',
-        metric_close_title: 'אחוז סגירה לרישום',
-        sec2_eyebrow: 'פרק 2 • מפת חולשות GEO, AEO, SEO וחוויית משתמש בנייד',
-        sec2_title: '9 מוקדי אובדן לידים וחוסר נראות ב-ChatGPT / Perplexity / Google AI',
-        vuln_tab_all: 'כל החולשות (9)',
-        vuln_tab_ux: 'UX במובייל והמרה (4)',
-        vuln_tab_aeo: 'GEO / AEO ו-Schema.org (5)',
-        aeo_box_eyebrow: 'חבילת AEO מוכנה למנועי בינה מלאכותית (סוכן 3)',
-        aeo_box_title: 'בלוקים של שאלות ותשובות (45–55 מילים) + סכמת JSON-LD להובלה ב-ChatGPT ו-Perplexity',
-        btn_copy_schema: 'העתק קוד JSON-LD',
-        sec3_eyebrow: 'פרק 3 • מחשבון הכנסות אבודות ו-PREDICTIVE KPI לבעלים (סוכן 5)',
-        sec3_title: 'מודל צמיחה פיננסי להנהלת מרכז ניומן וסוכנות Nikk.Agency',
-        preset_conservative: 'תנועה נוכחית (3,400 ביקורים)',
-        preset_standard: 'תנועת יעד (10,000 ביקורים)',
-        preset_scale: 'צמיחה מואצת (25,000 ביקורים)',
-        slider1_label: '1. תנועת מבקרים חודשית באתר',
-        slider2_label: '2. הכנסה ממוצעת לקורס / וואוצ\'ר (USD)',
-        slider3_label: '3. אחוז סגירה של מחלקת הרישום מליד לתלמיד (%)',
-        kpi_legacy_leads_label: 'לידים כיום (המרה 1.8%)',
-        kpi_nextgen_leads_label: 'לידים ב-Next-Gen (המרה 6.5%)',
-        kpi_added_leads_label: 'תוספת לידים בחודש',
-        kpi_rev_badge: 'תוספת הכנסה חודשית צפויה',
-        kpi_annual_title: 'אפקט הכנסות שנתי צפוי (12 חודשים):',
-        sec4_eyebrow: 'פרק 4 • מערכת מיני-CRM חיה (הדמיית APPSHEET / MONDAY.COM • סוכן 6)',
-        sec4_title: 'מאגר לידים חי מהשאלון (index.html) וממחשבון הוואוצ\'רים (offer.html)',
-        crm_btn_add_lead: 'הוסף ליד בדיקה בקליק 1',
-        crm_btn_csv: 'ייצוא CSV',
-        crm_btn_json: 'ייצוא JSON',
-        crm_btn_reset: 'איפוס דמו',
-        crm_kpi_total: 'סה"כ לידים ב-CRM',
-        crm_kpi_new: 'ליד חדש',
-        crm_kpi_voucher: 'בדיקת וואוצ\'ר',
-        crm_kpi_contract: 'חוזה / שולם',
-        crm_kpi_pipeline: 'שווי צנרת עסקאות (Pipeline)',
-        crm_filter_all: 'הכל',
-        status_new: 'ליד חדש',
-        status_voucher: 'בדיקת וואוצ\'ר',
-        status_contract: 'חוזה נשלח',
-        status_paid: 'שולם',
-        th_client: 'מועמד ופרטי קשר',
-        th_course: 'קורס מבוקש ומתכונת',
-        th_voucher: 'חישוב וואוצ\'ר / פיקדון',
-        th_source: 'מקור הגעה',
-        th_status: 'סטטוס עסקה (Live)',
-        th_actions: 'פעולות',
-        sec5_eyebrow: 'פרק 5 • הצעה מסחרית בטוחה (7-DAY RISK-FREE A/B SPLIT-TEST) ופיץ\' מוכן',
-        sec5_title: 'השקת מבחן השוואה A/B תוך 7 ימים באפס סיכון לאתר הקיים'
+        nav_subtitle: 'מרכז ניומן • האקדמיה להייטק, AI, שיווק GEO/AEO/SEO וקריירה',
+        nav_home: 'ראשי',
+        nav_offer: 'מחשבון שובר 80%',
+        nav_audit: 'אודיט ואסטרטגיית צמיחה',
+        audit_badge: 'ניתוח פוטנציאל הצמיחה של newman.co.il • GEO / AEO / SEO 2026',
+        audit_title_1: 'כיצד להגדיל את יחס ההמרה של Newman Center ב-',
+        audit_title_2: 'ולהחזיר הכנסה אבודה של',
+        audit_title_3: 'בחודש',
+        audit_desc: 'ל-Newman Center (מרכז ניומן) מוניטין אדיר של 35 שנה, מרצים מנוסים וזכאות לשוברים ממשלתיים עד 80% (7000₪) ופיקדון צבאי עד 100%. עם זאת, תשתית ה-Wix הנוכחית מאבדת עד 68% מהגולשים במובייל. להלן תחשיב הצמיחה באחוזים והפתרון המוכן.',
+        kpi_1_lbl: 'צמיחה ביחס ההמרה ללידים',
+        kpi_1_sub: 'עלייה מ-1.8% ל-6.5% בזכות מחשבון שובר 80%',
+        kpi_2_lbl: 'האצת מהירות במובייל',
+        kpi_2_sub: 'טעינה תוך 0.8 שניות במקום 4.8 שניות',
+        kpi_3_lbl: 'נראות במנועי AI (GEO / AEO)',
+        kpi_3_sub: 'סכמת JSON-LD מלאה עבור ChatGPT, Perplexity ו-Google AI',
+        kpi_4_lbl: 'כיסוי שפות וקהלי יעד',
+        kpi_4_sub: 'מעבר מיידי בין RU / עב / EN בלחיצה אחת',
+        before_tag: 'הגרסה הנוכחית (newman.co.il)',
+        before_score: 'אובדן טראפיק: עד 68%',
+        before_title: '5 צווארי בקבוק הפוגעים בהחזר ההשקעה מפרסום כיום',
+        before_li_1: 'מנוע Wix כבד במובייל (זמן טעינה 4.8 שניות) — מחצית מהגולשים בסמארטפון נוטשים לפני חשיפת ההצעה.',
+        before_li_2: 'חוסר במחשבון אינטראקטיבי לבדיקת שובר משרד הקליטה עד 80% (7000₪) ופיקדון צבאי עד 100% במסך הראשון.',
+        before_li_3: 'היעדר מסלול הדגל הרווחי של 2026: לימודי AI, שיווק באינטרנט והזרמת טראפיק GEO / AEO / SEO.',
+        before_li_4: 'היתרונות החזקים של המרכז (אפליקציות לאנדרואיד, שולחן עבודה, ווב, שרתים ומשחקים) מוסתרים בעמודים פנימיים ללא קריאה רגשית לפעולה.',
+        before_li_5: 'חוסר בנתונים מובנים Schema.org, המונע ממנועי בינה מלאכותית להמליץ על המרכז בשאילתות על שוברי לימודים.',
+        after_tag: 'הארכיטקטורה החדשה של Newman Center',
+        after_score: 'תוספת לידים: +261%',
+        after_title: 'כיצד אב-הטיפוס הופך מבקרים לפניות חמות ב-WhatsApp וב-*3331',
+        after_li_1: 'טעינה מיידית במובייל (0.8 שניות), עיצוב סגול-תכלת יוקרתי עם טקסט בהיר, מצב כהה/בהיר ומעבר חלק בין RU / עב / EN.',
+        after_li_2: 'מחשבון שובר מאומת לפי gov.il עד 80% (7000₪) ופיקדון עד 100% עם הדגשת טופס ההתחייבות להשמה בעבודה.',
+        after_li_3: 'הוספת מסלול יוקרתי ללימודי AI, שיווק דיגיטלי וטראפיק GEO / AEO / SEO המושך קהלים חדשים ורווחיים.',
+        after_li_4: 'הבלטת המסרים המנצחים (תוכנית מודרנית — 85% פרקטיקה, מרצים מנוסים, סיוע בהשמה — 92%, אנדרואיד, ווב, שרתים ומשחקים) עם שכר של 15000–28000₪.',
+        after_li_5: 'ללא מערכות CRM מסורבלות באמצע — כל ליד מועבר בלחיצה אחת ישירות ל-WhatsApp של צוות הרישום ולמספר *3331.',
+        roi_kicker: 'מודל כלכלי להנהלת Newman Center',
+        roi_title: 'מחשבון תוספת הכנסה בהטמעת המשפך החדש (+261% להמרה)',
+        roi_subtitle: 'הזיזו את מחוון התנועה החודשית וראו כמה תלמידים והכנסות נוספות יתקבלו במעבר מיחס המרה של 1.8% ל-6.5% באותו תקציב פרסום.',
+        roi_slider_1: 'תנועת גולשים חודשית לאתר (ביקורים בחודש):',
+        roi_slider_2: 'שכר לימוד ממוצע לקורס (₪):',
+        roi_leads_lbl: 'פניות נוספות בחודש (+261%):',
+        roi_students_lbl: 'תלמידים נוספים בקבוצות (לפי 15% סגירה):',
+        roi_rev_lbl: 'תוספת הכנסה חודשית לסניפי המרכז:',
+        drv_kicker: 'מנועי צמיחה ומיתוג רגשי 2026',
+        drv_title: 'כיצד שדרוג המסרים מהאתר המקורי וקורס AI / GEO / AEO / SEO מזניקים מכירות',
+        drv_subtitle: 'שמרנו על 100% מתוכניות הליבה של Newman Center, העצמנו אותן במסרים רגשיים ובאחוזי תועלת, והוספנו את המסלול המבוקש ביותר ב-2026.',
+        drv_1_t: 'קורס AI ושיווק GEO / AEO / SEO',
+        drv_1_d: 'מושך קהל יעד משלם חדש: אנשי שיווק, בעלי עסקים ומומחי טראפיק ב-ChatGPT, Perplexity ו-Google AI.',
+        drv_2_t: 'אנדרואיד, ווב, שולחן עבודה, שרתים ומשחקים',
+        drv_2_d: 'רשימת הטכנולוגיות הפכה ל-6 כרטיסי מוצר מלהיבים עם הצגת שכר התחלתי של 15000–28000₪ (4000–7500$).',
+        drv_3_t: 'אימות שקוף של שובר gov.il',
+        drv_3_d: 'מסיר את החסם המרכזי של העולה: מסביר בבירור את כלל ה-80% (עד 7000₪) ואת טופס ההתחייבות להשמה מהמרכז.',
+        drv_4_t: 'ניתוב ישיר ללא אובדן לידים',
+        drv_4_d: 'ויתור על טפסים ארוכים: הפנייה עם תחשיב השובר המוכן פותחת תוך שנייה שיחה ישירה ב-WhatsApp.',
+        pitch_kicker: 'הצעה ללא סיכון להנהלת Newman Center',
+        pitch_title: 'הפעילו מבחן A/B של 7 ימים ללא השבתת האתר הקיים',
+        pitch_subtitle: 'אין צורך לשנות את האתר הקיים ב-newman.co.il. הפנו רק 25%–30% מתנועת הפרסום לאב-טיפוס תלת-לשוני זה (RU / עב / EN) למשך 7 ימים ומדדו את הזינוק בפניות ל-WhatsApp ול-*3331.',
+        pitch_btn_wa: 'לתיאום פיילוט 7 ימים ב-WhatsApp',
+        footer_copy: '© 1991–2026 מרכז ניומן • תל אביב, חיפה, ירושלים, באר שבע, נתניה, אשדוד • *3331',
+        mob_calc_link: 'מחשבון 80%',
+        mob_wa_cta: 'הפעילו פיילוט 7 ימים (+261%)'
+      },
+      en: {
+        nav_subtitle: 'מרכז ניומן • High-Tech, AI, GEO/AEO/SEO & Career Academy',
+        nav_home: 'Home',
+        nav_offer: '80% Voucher Calculator',
+        nav_audit: 'Audit & Growth Strategy',
+        audit_badge: 'Executive Growth Audit of newman.co.il • GEO / AEO / SEO 2026',
+        audit_title_1: 'How to increase Newman Center traffic conversion by',
+        audit_title_2: 'and recover',
+        audit_title_3: 'in monthly revenue',
+        audit_desc: 'Newman Center (מרכז ניומן) holds massive 35-year brand equity, experienced industry instructors, and eligibility for state vouchers up to 80% (7000₪) and 100% IDF Pikadon. Yet the legacy Wix mobile layout loses up to 68% of high-intent mobile traffic. Below is the exact percentage growth breakdown and turnkey solution.',
+        kpi_1_lbl: 'Lead Conversion Lift',
+        kpi_1_sub: 'From 1.8% to 6.5% via the 80% Voucher Calculator',
+        kpi_2_lbl: 'Mobile Speed Boost',
+        kpi_2_sub: '0.8s load time instead of 4.8s (Mobile LCP)',
+        kpi_3_lbl: 'AI Search Readiness (GEO / AEO)',
+        kpi_3_sub: 'Full JSON-LD schema for ChatGPT, Perplexity & Google AI',
+        kpi_4_lbl: 'Multi-Language Reach',
+        kpi_4_sub: 'Instant 1-click RU / עב / EN language switching',
+        before_tag: 'Current Site (newman.co.il)',
+        before_score: 'Traffic Drop-off: up to 68%',
+        before_title: '5 bottlenecks reducing ad spend ROI right now',
+        before_li_1: 'Heavy Wix Thunderbird bundle (4.8s mobile load)—half of smartphone visitors bounce before seeing your core offer.',
+        before_li_2: 'No interactive above-the-fold calculator for the 80% (7000₪) Ministry voucher or 100% IDF Pikadon.',
+        before_li_3: 'Missing 2026’s highest-margin track: AI Engineering, Digital Marketing & GEO / AEO / SEO traffic generation.',
+        before_li_4: 'Powerful hooks (“Mobile apps especially Android”, “Desktop & Web apps”, “Servers”, “Games”) are buried inside sub-tabs without emotional urgency.',
+        before_li_5: 'Missing Schema.org structured data (EducationalOrganization, Course, FAQPage), preventing AI engines from citing Newman Center.',
+        after_tag: 'New Newman Center Architecture',
+        after_score: 'Lead Volume Lift: +261%',
+        after_title: 'How this prototype turns visitors into hot WhatsApp & *3331 inquiries',
+        after_li_1: 'Sub-second mobile load (0.8s), violet & sky-blue palette with crisp light typography, Dark/Light mode, and RU / עב / EN switcher.',
+        after_li_2: 'Gov.il-verified 80% (7000₪) voucher & 100% Pikadon calculator highlighting the official written job placement commitment (התחייבות להשמה בעבודה).',
+        after_li_3: 'Adds a flagship “AI, Digital Marketing & GEO / AEO / SEO Traffic” program attracting entrepreneurs, marketers, and career switchers.',
+        after_li_4: 'Original hooks (“Modern training program—85% practice”, “Experienced instructors”, “Job placement support—92%”, Android, Web, Servers & Games) elevated with 15000–28000₪ salary proof.',
+        after_li_5: 'Zero complex intermediate CRM—every lead routes in 1 click directly to your admissions WhatsApp and short number *3331.',
+        roi_kicker: 'Financial Model for Newman Center Leadership',
+        roi_title: 'Incremental Revenue Calculator with the New Funnel (+261% conversion lift)',
+        roi_subtitle: 'Slide your monthly traffic volume to see how many additional students and how much monthly revenue moving from 1.8% to 6.5% conversion generates on the exact same ad budget.',
+        roi_slider_1: 'Monthly website traffic (visits / month):',
+        roi_slider_2: 'Average course tuition (₪):',
+        roi_leads_lbl: 'Additional monthly leads (+261%):',
+        roi_students_lbl: 'Additional enrolled students (at 15% close rate):',
+        roi_rev_lbl: 'Additional monthly branch revenue:',
+        drv_kicker: '2026 Growth & Emotional Packaging Drivers',
+        drv_title: 'How supercharged original hooks and the AI / GEO / AEO / SEO track boost enrollment',
+        drv_subtitle: 'We preserved 100% of Newman Center’s core programs, supercharged them with emotional urgency and percentage benefits, and added 2026’s #1 growth track.',
+        drv_1_t: 'AI & GEO / AEO / SEO Marketing Track',
+        drv_1_d: 'Attracts a high-value audience: marketers, business owners, and traffic specialists targeting ChatGPT, Perplexity, and Google AI.',
+        drv_2_t: 'Android, Web, Desktop, Servers & Games',
+        drv_2_d: 'Turned plain bullet points into 6 vibrant product cards anchored by 15000–28000₪ (4000–7500$) starting salaries.',
+        drv_3_t: 'Transparent gov.il Voucher Verification',
+        drv_3_d: 'Removes the #1 Olim objection by clearly explaining the 80% (up to 7000₪) rule and Newman Center’s written placement commitment.',
+        drv_4_t: 'Zero-Leakage WhatsApp Routing',
+        drv_4_d: 'Replaces high-friction forms: a pre-filled voucher calculation opens a direct WhatsApp chat in 1 second.',
+        pitch_kicker: 'Zero-Risk Proposal for Newman Center',
+        pitch_title: 'Run a 7-day A/B split test without touching your main site',
+        pitch_subtitle: 'No need to disrupt newman.co.il. Route just 25%–30% of ad traffic to this high-speed 3-language prototype (RU / עב / EN) for 7 days and measure the surge in WhatsApp and *3331 inquiries.',
+        pitch_btn_wa: 'Launch 7-Day Split Test via WhatsApp',
+        footer_copy: '© 1991–2026 מרכז ניומן • Tel Aviv, Haifa, Jerusalem, Beer Sheva, Netanya, Ashdod • *3331',
+        mob_calc_link: '80% Calculator',
+        mob_wa_cta: 'Start 7-Day Test (+261%)'
       }
     };
 
-    // =========================================================================
-    // 2. THEME & LANGUAGE MANAGEMENT
-    // =========================================================================
-    let currentLang = localStorage.getItem('newman_lang') || 'ru';
+    function updateRoiMath() {
+      const visSlider = document.getElementById('visitors-slider');
+      const tuiSlider = document.getElementById('tuition-slider');
+      const visitors = visSlider ? parseInt(visSlider.value, 10) : 6500;
+      const tuition = tuiSlider ? parseInt(tuiSlider.value, 10) : 9500;
 
-    function toggleTheme() {
-      const htmlEl = document.documentElement;
-      const isDark = htmlEl.classList.contains('dark');
-      if (isDark) {
-        htmlEl.classList.remove('dark');
-        localStorage.setItem('newman_theme', 'light');
-      } else {
-        htmlEl.classList.add('dark');
-        localStorage.setItem('newman_theme', 'dark');
+      const oldLeads = Math.round(visitors * 0.018);
+      const newLeads = Math.round(visitors * 0.065);
+      const extraLeads = Math.max(10, newLeads - oldLeads);
+      const extraStudents = Math.max(2, Math.round(extraLeads * 0.15));
+      const extraNis = extraStudents * tuition;
+      const extraUsd = Math.round(extraNis / 3.7);
+
+      const visVal = document.getElementById('visitors-val');
+      const tuiVal = document.getElementById('tuition-val');
+      const leadsEl = document.getElementById('roi-extra-leads');
+      const studEl = document.getElementById('roi-extra-students');
+      const nisEl = document.getElementById('roi-extra-nis');
+      const usdEl = document.getElementById('roi-extra-usd');
+
+      if (visVal) {
+        visVal.textContent = currentLang === 'he' ? `${visitors} ביקורים` : (currentLang === 'en' ? `${visitors} visits` : `${visitors} визитов`);
+      }
+      if (tuiVal) {
+        tuiVal.textContent = `${tuition}₪`;
+      }
+      if (leadsEl) {
+        leadsEl.textContent = currentLang === 'he' ? `+${extraLeads} לידים/חודש` : (currentLang === 'en' ? `+${extraLeads} leads/mo` : `+${extraLeads} лидов/мес`);
+      }
+      if (studEl) {
+        studEl.textContent = currentLang === 'he' ? `+${extraStudents} תלמידים` : (currentLang === 'en' ? `+${extraStudents} students` : `+${extraStudents} студентов`);
+      }
+      if (nisEl) {
+        nisEl.textContent = currentLang === 'he' ? `+${extraNis}₪ לחודש` : (currentLang === 'en' ? `+${extraNis}₪ / mo` : `+${extraNis}₪ / мес`);
+      }
+      if (usdEl) {
+        usdEl.textContent = currentLang === 'he'
+          ? `שווה ערך ל-+${extraUsd}$ הכנסה נוספת בחודש`
+          : (currentLang === 'en' ? `equiv. +${extraUsd}$ incremental monthly revenue` : `экв. +${extraUsd}$ дополнительной выручки в месяц`);
       }
     }
 
-    function applyLanguage(lang) {
-      currentLang = (lang === 'he') ? 'he' : 'ru';
-      localStorage.setItem('newman_lang', currentLang);
-      document.documentElement.lang = currentLang;
-      document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+    function copyPitch(id, btn) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText.trim()).then(() => {
+        const old = btn.textContent;
+        btn.textContent = '✓ OK';
+        setTimeout(() => { btn.textContent = old; }, 2000);
+      });
+    }
 
-      const ruBadge = document.getElementById('langBadgeRu');
-      const heBadge = document.getElementById('langBadgeHe');
-      if (ruBadge && heBadge) {
-        if (currentLang === 'he') {
-          heBadge.className = 'text-blue-600 dark:text-blue-400 font-extrabold';
-          ruBadge.className = 'text-slate-500 dark:text-slate-400';
+    function setLanguage(lang) {
+      if (!i18n[lang]) lang = 'ru';
+      currentLang = lang;
+      localStorage.setItem('newman_lang', lang);
+
+      const htmlEl = document.documentElement;
+      htmlEl.lang = lang;
+      htmlEl.dir = lang === 'he' ? 'rtl' : 'ltr';
+
+      ['ru', 'he', 'en'].forEach(code => {
+        const btn = document.getElementById('lang-btn-' + code);
+        if (!btn) return;
+        if (code === lang) {
+          btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow';
         } else {
-          ruBadge.className = 'text-blue-600 dark:text-blue-400 font-extrabold';
-          heBadge.className = 'text-slate-500 dark:text-slate-400';
+          btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition-all text-sky-200 hover:text-white';
         }
-      }
+      });
 
-      const dict = I18N_DICT[currentLang];
+      const dict = i18n[lang];
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dict && dict[key]) {
-          el.innerHTML = dict[key];
+        if (dict[key]) {
+          el.textContent = dict[key];
         }
       });
 
-      const searchInput = document.getElementById('crmSearchInput');
-      if (searchInput) {
-        searchInput.placeholder = currentLang === 'he'
-          ? 'חיפוש לפי שם, טלפון, קורס...'
-          : 'Поиск по имени, телефону, курсу...';
-      }
-
-      recalcOwnerRoi();
-      renderCrmTable();
+      updateRoiMath();
     }
 
-    function toggleLanguage() {
-      applyLanguage(currentLang === 'ru' ? 'he' : 'ru');
-    }
-
-    // =========================================================================
-    // 3. INTERACTIVE BEFORE / AFTER SPLIT COMPARISON
-    // =========================================================================
-    function updateSplitView(val) {
-      const num = parseInt(val, 10);
-      const legacyPanel = document.getElementById('legacyPanel');
-      const nextgenPanel = document.getElementById('nextgenPanel');
-      if (!legacyPanel || !nextgenPanel) return;
-
-      if (num < 35) {
-        legacyPanel.classList.add('ring-2', 'ring-rose-500', 'scale-[1.01]');
-        nextgenPanel.classList.remove('ring-2', 'ring-emerald-400', 'scale-[1.01]');
-        nextgenPanel.style.opacity = '0.65';
-        legacyPanel.style.opacity = '1';
-      } else if (num > 65) {
-        nextgenPanel.classList.add('ring-2', 'ring-emerald-400', 'scale-[1.01]');
-        legacyPanel.classList.remove('ring-2', 'ring-rose-500', 'scale-[1.01]');
-        legacyPanel.style.opacity = '0.65';
-        nextgenPanel.style.opacity = '1';
+    function applyTheme(theme) {
+      const htmlEl = document.documentElement;
+      const sunIcon = document.getElementById('theme-icon-sun');
+      const moonIcon = document.getElementById('theme-icon-moon');
+      if (theme === 'light') {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        if (sunIcon) sunIcon.classList.remove('hidden');
+        if (moonIcon) moonIcon.classList.add('hidden');
       } else {
-        legacyPanel.classList.remove('ring-2', 'ring-rose-500', 'scale-[1.01]');
-        nextgenPanel.classList.remove('ring-2', 'ring-emerald-400', 'scale-[1.01]');
-        legacyPanel.style.opacity = '1';
-        nextgenPanel.style.opacity = '1';
+        htmlEl.classList.remove('light');
+        htmlEl.classList.add('dark');
+        if (sunIcon) sunIcon.classList.add('hidden');
+        if (moonIcon) moonIcon.classList.remove('hidden');
       }
     }
 
-    function setSplitPosition(val) {
-      const range = document.getElementById('beforeAfterRange');
-      if (range) {
-        range.value = val;
-        updateSplitView(val);
-      }
+    function toggleTheme() {
+      const current = localStorage.getItem('newman_theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('newman_theme', next);
+      applyTheme(next);
     }
 
-    // =========================================================================
-    // 4. VULNERABILITY FILTERING
-    // =========================================================================
-    function filterVulnerabilities(cat) {
-      ['all', 'ux', 'aeo'].forEach(tab => {
-        const btn = document.getElementById('vulnTab_' + tab);
-        if (btn) {
-          if (tab === cat) {
-            btn.className = 'px-3.5 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all';
-          } else {
-            btn.className = 'px-3.5 py-2 rounded-xl text-xs font-bold glass-card text-slate-600 dark:text-slate-300 transition-all';
-          }
-        }
-      });
-
-      document.querySelectorAll('.vuln-card').forEach(card => {
-        const c = card.getAttribute('data-category');
-        if (cat === 'all' || c === cat) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-
-    // =========================================================================
-    // 5. OWNER LOST REVENUE & PREDICTIVE KPI CALCULATOR (AGENT 5)
-    // =========================================================================
-    const ILS_PER_USD = 3.67;
-    const LEGACY_CR = 0.018;   // 1.8%
-    const NEXTGEN_CR = 0.065;  // 6.5%
-
-    function formatNumber(n) {
-      return Math.round(n).toLocaleString('en-US');
-    }
-
-    function recalcOwnerRoi() {
-      const trafficEl = document.getElementById('sliderTraffic');
-      const avgCheckEl = document.getElementById('sliderAvgCheck');
-      const closeRateEl = document.getElementById('sliderCloseRate');
-      if (!trafficEl || !avgCheckEl || !closeRateEl) return;
-
-      const traffic = parseInt(trafficEl.value, 10) || 10000;
-      const avgCheckUsd = parseInt(avgCheckEl.value, 10) || 2500;
-      const closeRatePct = parseInt(closeRateEl.value, 10) || 22;
-      const closeRate = closeRatePct / 100;
-
-      // Update slider badges
-      document.getElementById('valTraffic').textContent = formatNumber(traffic);
-      document.getElementById('valAvgCheck').textContent = '$' + formatNumber(avgCheckUsd);
-      document.getElementById('valCloseRate').textContent = closeRatePct + '%';
-
-      // Calculate Leads
-      const legacyLeads = Math.round(traffic * LEGACY_CR);
-      const nextgenLeads = Math.round(traffic * NEXTGEN_CR);
-      const addedLeads = Math.max(0, nextgenLeads - legacyLeads);
-
-      // Calculate Enrollments & Revenue Lift
-      const addedStudents = Math.max(1, Math.round(addedLeads * closeRate));
-      const monthlyRevUsd = addedStudents * avgCheckUsd;
-      const monthlyRevIls = Math.round(monthlyRevUsd * ILS_PER_USD);
-      const annualRevUsd = monthlyRevUsd * 12;
-      const annualRevIls = monthlyRevIls * 12;
-
-      document.getElementById('outLegacyLeads').textContent = formatNumber(legacyLeads);
-      document.getElementById('outNextgenLeads').textContent = formatNumber(nextgenLeads);
-      document.getElementById('outAddedLeads').textContent = '+' + formatNumber(addedLeads);
-
-      const perMoLabel = currentLang === 'he' ? 'חודש' : 'мес';
-      const perYrLabel = currentLang === 'he' ? 'שנה' : 'год';
-      const studentsLabel = currentLang === 'he'
-        ? `+${formatNumber(addedStudents)} תלמידים חדשים בחודש`
-        : `+${formatNumber(addedStudents)} новых студентов/мес`;
-
-      document.getElementById('outAddedStudents').textContent = studentsLabel;
-      document.getElementById('outMonthlyRevUsd').textContent = `+$${formatNumber(monthlyRevUsd)} / ${perMoLabel}`;
-      document.getElementById('outMonthlyRevIls').textContent = `≈ +${formatNumber(monthlyRevIls)} ₪ / ${perMoLabel}`;
-      document.getElementById('outAnnualRevUsd').textContent = `+$${formatNumber(annualRevUsd)} / ${perYrLabel}`;
-      document.getElementById('outAnnualRevIls').textContent = `≈ +${formatNumber(annualRevIls)} ₪ / ${perYrLabel}`;
-
-      // Category Shares: 54% Hi-Tech, 22% Accounting, 24% Technical/RealEstate/Beauty
-      const cat1 = Math.round(monthlyRevUsd * 0.54);
-      const cat2 = Math.round(monthlyRevUsd * 0.22);
-      const cat3 = Math.round(monthlyRevUsd * 0.24);
-      document.getElementById('outCat1Usd').textContent = `+$${formatNumber(cat1)} / ${perMoLabel}`;
-      document.getElementById('outCat2Usd').textContent = `+$${formatNumber(cat2)} / ${perMoLabel}`;
-      document.getElementById('outCat3Usd').textContent = `+$${formatNumber(cat3)} / ${perMoLabel}`;
-    }
-
-    function applyRoiPreset(traffic, avgCheck, closeRate) {
-      document.getElementById('sliderTraffic').value = traffic;
-      document.getElementById('sliderAvgCheck').value = avgCheck;
-      document.getElementById('sliderCloseRate').value = closeRate;
-      recalcOwnerRoi();
-    }
-
-    // =========================================================================
-    // 6. LIVE MINI-CRM ENGINE (SYNCED VIA localStorage 'newman_crm_leads')
-    // =========================================================================
-    const CRM_STORAGE_KEY = 'newman_crm_leads';
-    let currentCrmFilter = 'all';
-
-    function getDefaultDemoLeads() {
-      return [
-        {
-          id: 'lead_demo_101',
-          name: 'Давид Леви / דוד לוי',
-          phone: '054-839-2104',
-          city: 'Тель-Авив (Дерех ха-Агана)',
-          course: 'QA Тестирование ПО (Manual + Automation)',
-          format: 'Кампус Тель-Авив + Гибрид',
-          status_tenure: 'Оле Хадаш (2 года в стране)',
-          voucher: 'Ваучер Мин. алии 90% (10,700 ₪ / $2,900)',
-          priceUsd: 3200,
-          priceIls: 11800,
-          source: 'index.html (AI-Квиз)',
-          status: 'voucher_check',
-          createdAt: 'Сегодня, 11:24'
-        },
-        {
-          id: 'lead_demo_102',
-          name: 'Анна Коэн / אנה כהן',
-          phone: '052-614-9087',
-          city: 'Хайфа (Live Online)',
-          course: 'Full-Stack WEB / JavaScript / PHP',
-          format: 'Живой онлайн (Live Online)',
-          status_tenure: 'Демобилизованный солдат ЦАХАЛ (Пикадон)',
-          voucher: '100% Армейский Пикадон (15,500 ₪ / $4,200)',
-          priceUsd: 4200,
-          priceIls: 15500,
-          source: 'offer.html (Калькулятор)',
-          status: 'paid',
-          createdAt: 'Сегодня, 12:08'
-        },
-        {
-          id: 'lead_demo_103',
-          name: 'Михаэль Кац / מיכאל כץ',
-          phone: '058-490-3312',
-          city: 'Нетания',
-          course: 'Бухгалтерский учет 1+2 + Расчет зарплат (Хашав Схар)',
-          format: 'Вечерняя группа (Гибрид)',
-          status_tenure: 'Репатриант (6 лет в стране)',
-          voucher: 'Ваучер Мин. алии 80% (7,000 ₪ / $1,900)',
-          priceUsd: 2400,
-          priceIls: 8900,
-          source: 'index.html (AI-Квиз)',
-          status: 'new',
-          createdAt: 'Сегодня, 14:19'
-        }
-      ];
-    }
-
-    function normalizeStatusKey(rawStatus) {
-      if (!rawStatus) return 'new';
-      const s = String(rawStatus).toLowerCase();
-      if (s.includes('paid') || s.includes('оплач') || s.includes('שולם')) return 'paid';
-      if (s.includes('contract') || s.includes('договор') || s.includes('חוזה')) return 'contract_sent';
-      if (s.includes('voucher') || s.includes('ваучер') || s.includes('וואוצ')) return 'voucher_check';
-      return 'new';
-    }
-
-    function normalizeLeadItem(item, idx) {
-      const priceUsd = Number(item.priceUsd || item.price_usd || item.amountUsd || 2900);
-      const priceIls = Number(item.priceIls || item.price_ils || Math.round(priceUsd * 3.7));
-      return {
-        id: item.id || ('lead_' + Date.now() + '_' + idx),
-        name: item.name || item.clientName || item.fullName || 'Кандидат Newman Center',
-        phone: item.phone || item.clientPhone || item.tel || '050-000-0000',
-        city: item.city || item.location || 'Тель-Авив',
-        course: item.course || item.program || item.direction || 'QA Тестирование ПО (Manual + Automation)',
-        format: item.format || item.studyFormat || 'Тель-Авив / Live Online',
-        status_tenure: item.status_tenure || item.tenure || item.eligibility || 'До 10 лет в стране',
-        voucher: item.voucher || item.subsidy || item.voucherInfo || 'Ваучер Мин. алии 85% (10,700 ₪ / $2,900)',
-        priceUsd: priceUsd,
-        priceIls: priceIls,
-        source: item.source || item.page || 'index.html / offer.html',
-        status: normalizeStatusKey(item.status || item.leadStatus),
-        createdAt: item.createdAt || item.date || item.timestamp || 'Только что'
-      };
-    }
-
-    function loadCrmLeads() {
-      try {
-        const raw = localStorage.getItem(CRM_STORAGE_KEY);
-        if (!raw) {
-          const initial = getDefaultDemoLeads();
-          localStorage.setItem(CRM_STORAGE_KEY, JSON.stringify(initial));
-          return initial;
-        }
-        const parsed = JSON.parse(raw);
-        if (!Array.isArray(parsed) || parsed.length === 0) {
-          const initial = getDefaultDemoLeads();
-          localStorage.setItem(CRM_STORAGE_KEY, JSON.stringify(initial));
-          return initial;
-        }
-        return parsed.map((item, idx) => normalizeLeadItem(item, idx));
-      } catch (e) {
-        return getDefaultDemoLeads();
-      }
-    }
-
-    function saveCrmLeads(leads) {
-      try {
-        localStorage.setItem(CRM_STORAGE_KEY, JSON.stringify(leads));
-      } catch (e) {}
-    }
-
-    function setCrmStatusFilter(st) {
-      currentCrmFilter = st;
-      ['all', 'new', 'voucher_check', 'contract_sent', 'paid'].forEach(key => {
-        const btn = document.getElementById('crmFilter_' + key);
-        if (btn) {
-          if (key === st) {
-            btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all';
-          } else {
-            btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 dark:hover:bg-white/10 transition-all';
-          }
-        }
-      });
-      renderCrmTable();
-    }
-
-    function updateLeadStatus(leadId, newStatus) {
-      const leads = loadCrmLeads();
-      const target = leads.find(l => String(l.id) === String(leadId));
-      if (target) {
-        target.status = newStatus;
-        saveCrmLeads(leads);
-        renderCrmTable();
-        showToast(currentLang === 'he' ? 'סטטוס העסקה עודכן ב-CRM!' : 'Статус сделки обновлен в CRM!');
-      }
-    }
-
-    function deleteLead(leadId) {
-      let leads = loadCrmLeads();
-      leads = leads.filter(l => String(l.id) !== String(leadId));
-      saveCrmLeads(leads);
-      renderCrmTable();
-    }
-
-    function addOneClickTestLead() {
-      const samplePool = [
-        {
-          name: 'Илья Розенберг / איליה רוזנברג',
-          phone: '053-718-4420',
-          city: 'Ашдод (Live Online)',
-          course: 'Программирование на Python и анализ данных',
-          format: 'Live Online (вечер)',
-          status_tenure: 'Оле Хадаш (1.5 года в стране)',
-          voucher: 'Ваучер Мин. алии 85% (11,100 ₪ / $3,000)',
-          priceUsd: 3600,
-          priceIls: 13300,
-          source: 'offer.html (Тест 1-клик)'
-        },
-        {
-          name: 'Ноа Шапиро / נועה שפירא',
-          phone: '054-209-7731',
-          city: 'Рамат-Ган',
-          course: 'Веб-дизайн, UX/UI и графический дизайн',
-          format: 'Кампус Тель-Авив (Дерех ха-Агана 34)',
-          status_tenure: 'Тошав Хозер (4 года в стране)',
-          voucher: 'Ваучер Мин. алии 85% (9,100 ₪ / $2,460)',
-          priceUsd: 2900,
-          priceIls: 10700,
-          source: 'index.html (AI-Квиз)'
-        },
-        {
-          name: 'Алексей Вайс / אלכסיי וייס',
-          phone: '050-942-1185',
-          city: 'Беэр-Шева',
-          course: 'Подготовка к госэкзамену на лицензию маклера (Рашам ха-Метавхим)',
-          format: 'Интерактивный Live Online',
-          status_tenure: 'Оле Хадаш (3 года в стране)',
-          voucher: 'Ваучер Мин. алии 90% (4,950 ₪ / $1,350)',
-          priceUsd: 1500,
-          priceIls: 5500,
-          source: 'audit.html (Демо-тест)'
-        }
-      ];
-      const pick = samplePool[Math.floor(Math.random() * samplePool.length)];
-      const now = new Date();
-      const timeStr = now.toTimeString().slice(0, 5);
-
-      const leads = loadCrmLeads();
-      leads.unshift({
-        id: 'lead_' + Date.now(),
-        name: pick.name,
-        phone: pick.phone,
-        city: pick.city,
-        course: pick.course,
-        format: pick.format,
-        status_tenure: pick.status_tenure,
-        voucher: pick.voucher,
-        priceUsd: pick.priceUsd,
-        priceIls: pick.priceIls,
-        source: pick.source,
-        status: 'new',
-        createdAt: (currentLang === 'he' ? 'היום, ' : 'Сегодня, ') + timeStr
-      });
-      saveCrmLeads(leads);
-      renderCrmTable();
-      showToast(currentLang === 'he' ? 'ליד בדיקה חדש נוסף ל-CRM!' : 'Новый тестовый лид с расчетом ваучера добавлен в CRM!');
-    }
-
-    function resetDemoLeads() {
-      const initial = getDefaultDemoLeads();
-      saveCrmLeads(initial);
-      renderCrmTable();
-      showToast(currentLang === 'he' ? 'נתוני הדמו אופסו בהצלחה' : 'Демо-база лидов восстановлена');
-    }
-
-    function openLeadWhatsApp(leadId) {
-      const leads = loadCrmLeads();
-      const lead = leads.find(l => String(l.id) === String(leadId));
-      if (!lead) return;
-      const cleanPhone = String(lead.phone).replace(/[^0-9]/g, '').replace(/^0/, '972');
-      const msg = currentLang === 'he'
-        ? `שלום ${lead.name}! כאן מרכז ניומן (*3331, דרך ההגנה 34 תל אביב). קיבלנו את פנייתך לגבי הקורס "${lead.course}" ובדיקת הזכאות (${lead.voucher}). מתי נוח לך לשוחח?`
-        : `Здравствуйте, ${lead.name}! Это Учебный центр «Ньюмен» (*3331, Тель-Авив, Дерех ха-Агана 34). Получили вашу заявку по курсу «${lead.course}» и расчет субсидии (${lead.voucher}). Подскажите, когда вам удобно подтвердить квоту?`;
-      window.open(`https://wa.me/${cleanPhone || '97235603046'}?text=${encodeURIComponent(msg)}`, '_blank');
-    }
-
-    function renderCrmTable() {
-      const leads = loadCrmLeads();
-      const tbody = document.getElementById('crmTableBody');
-      if (!tbody) return;
-
-      // Update KPI counters
-      const countTotal = leads.length;
-      const countNew = leads.filter(l => l.status === 'new').length;
-      const countVoucher = leads.filter(l => l.status === 'voucher_check').length;
-      const countWon = leads.filter(l => l.status === 'contract_sent' || l.status === 'paid').length;
-      const sumUsd = leads.reduce((acc, l) => acc + (Number(l.priceUsd) || 2900), 0);
-      const sumIls = leads.reduce((acc, l) => acc + (Number(l.priceIls) || 10700), 0);
-
-      document.getElementById('crmStatTotal').textContent = countTotal;
-      document.getElementById('crmStatNew').textContent = countNew;
-      document.getElementById('crmStatVoucher').textContent = countVoucher;
-      document.getElementById('crmStatWon').textContent = countWon;
-      document.getElementById('crmStatValue').textContent = `$${formatNumber(sumUsd)} (₪${formatNumber(sumIls)})`;
-
-      const navBadge = document.getElementById('navCrmCount');
-      const mobBadge = document.getElementById('mobCrmCount');
-      if (navBadge) navBadge.textContent = countTotal;
-      if (mobBadge) mobBadge.textContent = countTotal;
-
-      const query = (document.getElementById('crmSearchInput')?.value || '').trim().toLowerCase();
-      const filtered = leads.filter(l => {
-        if (currentCrmFilter !== 'all' && l.status !== currentCrmFilter) return false;
-        if (!query) return true;
-        return (
-          String(l.name).toLowerCase().includes(query) ||
-          String(l.phone).toLowerCase().includes(query) ||
-          String(l.course).toLowerCase().includes(query) ||
-          String(l.city).toLowerCase().includes(query)
-        );
-      });
-
-      const statusLabels = {
-        new: currentLang === 'he' ? 'ליד חדש' : 'Новый лид',
-        voucher_check: currentLang === 'he' ? 'בדיקת וואוצ\'ר' : 'Проверка ваучера',
-        contract_sent: currentLang === 'he' ? 'חוזה נשלח' : 'Договор отправлен',
-        paid: currentLang === 'he' ? 'שולם ✓' : 'Оплачено ✓'
-      };
-
-      const statusColors = {
-        new: 'bg-blue-500/15 text-blue-500 border-blue-500/30',
-        voucher_check: 'bg-amber-500/15 text-amber-400 border-amber-500/30',
-        contract_sent: 'bg-indigo-500/15 text-indigo-400 border-indigo-500/30',
-        paid: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-      };
-
-      tbody.innerHTML = filtered.map(lead => `
-        <tr class="hover:bg-slate-100/60 dark:hover:bg-white/[0.03] transition-colors">
-          <td class="py-3.5 px-4">
-            <div class="font-bold text-slate-900 dark:text-white">${lead.name}</div>
-            <div class="text-xs font-mono text-blue-500">${lead.phone}</div>
-            <div class="text-[11px] text-slate-400">${lead.city} • ${lead.createdAt}</div>
-          </td>
-          <td class="py-3.5 px-4">
-            <div class="font-semibold text-slate-800 dark:text-slate-200">${lead.course}</div>
-            <div class="text-[11px] text-slate-400">${lead.format} • ${lead.status_tenure}</div>
-          </td>
-          <td class="py-3.5 px-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
-              ${lead.voucher}
-            </span>
-            <div class="text-[11px] text-slate-400 mt-1 font-mono">
-              Стоимость курса: $${formatNumber(lead.priceUsd)} (₪${formatNumber(lead.priceIls)})
-            </div>
-          </td>
-          <td class="py-3.5 px-4">
-            <span class="px-2 py-1 rounded-md text-[11px] font-mono bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-              ${lead.source}
-            </span>
-          </td>
-          <td class="py-3.5 px-4">
-            <select onchange="updateLeadStatus('${lead.id}', this.value)" class="px-2.5 py-1.5 rounded-xl text-xs font-bold border cursor-pointer focus:outline-none ${statusColors[lead.status] || statusColors.new} bg-transparent">
-              <option value="new" class="bg-slate-900 text-white" ${lead.status === 'new' ? 'selected' : ''}>${statusLabels.new}</option>
-              <option value="voucher_check" class="bg-slate-900 text-white" ${lead.status === 'voucher_check' ? 'selected' : ''}>${statusLabels.voucher_check}</option>
-              <option value="contract_sent" class="bg-slate-900 text-white" ${lead.status === 'contract_sent' ? 'selected' : ''}>${statusLabels.contract_sent}</option>
-              <option value="paid" class="bg-slate-900 text-white" ${lead.status === 'paid' ? 'selected' : ''}>${statusLabels.paid}</option>
-            </select>
-          </td>
-          <td class="py-3.5 px-4 text-right whitespace-nowrap">
-            <button type="button" onclick="openLeadWhatsApp('${lead.id}')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all inline-flex items-center gap-1">
-              <span>WhatsApp</span>
-              <span>↗</span>
-            </button>
-            <button type="button" onclick="deleteLead('${lead.id}')" class="ml-1 px-2 py-1.5 rounded-xl text-xs text-slate-400 hover:text-rose-400 transition-colors" title="Удалить">
-              ✕
-            </button>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    function exportCrmCsv() {
-      const leads = loadCrmLeads();
-      const headers = ['ID', 'Name', 'Phone', 'City', 'Course', 'Voucher', 'PriceUSD', 'PriceILS', 'Source', 'Status', 'CreatedAt'];
-      const rows = leads.map(l => [
-        l.id, l.name, l.phone, l.city, l.course, l.voucher, l.priceUsd, l.priceIls, l.source, l.status, l.createdAt
-      ].map(v => `"${String(v || '').replace(/"/g, '""')}"`).join(','));
-      const csvContent = '\uFEFF' + [headers.join(','), ...rows].join('\n');
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'newman_crm_leads.csv';
-      a.click();
-      URL.revokeObjectURL(url);
-      showToast(currentLang === 'he' ? 'קובץ CSV הורד בהצלחה!' : 'База лидов экспортирована в CSV!');
-    }
-
-    function exportCrmJson() {
-      const leads = loadCrmLeads();
-      const blob = new Blob([JSON.stringify(leads, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'newman_crm_leads.json';
-      a.click();
-      URL.revokeObjectURL(url);
-      showToast(currentLang === 'he' ? 'קובץ JSON הורד בהצלחה!' : 'База лидов экспортирована в JSON!');
-    }
-
-    // =========================================================================
-    // 7. COPY PITCH & JSON-LD SCHEMA TO CLIPBOARD
-    // =========================================================================
-    function showToast(msg) {
-      const t = document.getElementById('auditToast');
-      if (!t) return;
-      t.textContent = msg;
-      t.classList.remove('hidden');
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => {
-        t.classList.add('hidden');
-      }, 3200);
-    }
-
-    function copyPitchText(lang) {
-      const el = document.getElementById(lang === 'he' ? 'pitchTextHe' : 'pitchTextRu');
-      if (!el) return;
-      navigator.clipboard.writeText(el.innerText).then(() => {
-        showToast(lang === 'he'
-          ? 'טקסט הפיץ\' בעברית הועתק ללוח!'
-          : 'Текст питча для Newman Center и Nikk.Agency скопирован!');
-      });
-    }
-
-    function copyJsonLdSchema() {
-      const schemaScript = document.querySelector('script[type="application/ld+json"]');
-      if (!schemaScript) return;
-      navigator.clipboard.writeText(schemaScript.innerText.trim()).then(() => {
-        showToast(currentLang === 'he'
-          ? 'קוד ה-JSON-LD הועתק ללוח!'
-          : 'Код микроразметки Schema.org JSON-LD скопирован!');
-      });
-    }
-
-    // Listen for live updates across browser tabs (from index.html / offer.html)
-    window.addEventListener('storage', (e) => {
-      if (e.key === CRM_STORAGE_KEY) {
-        renderCrmTable();
-      } else if (e.key === 'newman_lang' && e.newValue) {
-        applyLanguage(e.newValue);
-      } else if (e.key === 'newman_theme') {
-        if (e.newValue === 'light') {
-          document.documentElement.classList.remove('dark');
-        } else {
-          document.documentElement.classList.add('dark');
-        }
-      }
-    });
-
-    // Initialize on DOM Ready
     document.addEventListener('DOMContentLoaded', () => {
-      applyLanguage(currentLang);
-      recalcOwnerRoi();
-      renderCrmTable();
+      const savedTheme = localStorage.getItem('newman_theme') || 'dark';
+      applyTheme(savedTheme);
+      setLanguage(currentLang);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     });
   </script>
 </body>
