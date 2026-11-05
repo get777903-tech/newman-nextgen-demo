@@ -195,14 +195,25 @@
         </div>
       </a>
 
-      <!-- Center Page Links -->
-      <nav class="hidden lg:flex items-center gap-1 bg-slate-900/70 border border-violet-500/25 rounded-2xl p-1.5">
-        <a href="index.html" class="px-4 py-2 rounded-xl text-sm font-medium text-sky-100 hover:text-white hover:bg-violet-600/20 transition-all" data-i18n="nav_home">Главная</a>
-        <a href="offer.html" class="px-4 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-violet-600 to-sky-500 shadow-md shadow-violet-600/25" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
-        <a href="audit.html" class="px-4 py-2 rounded-xl text-sm font-medium text-sky-100 hover:text-white hover:bg-violet-600/20 transition-all" data-i18n="nav_audit">Аудит &amp; Стратегия Роста</a>
+      <!-- 4 Prominent Enlarged Navigation Buttons -->
+      <nav class="hidden lg:flex items-center gap-2 p-1.5 rounded-2xl bg-slate-900/90 border border-violet-400/40 shadow-xl" aria-label="Main Navigation">
+        <a href="index.html" class="px-4 py-2.5 rounded-xl text-sm font-extrabold text-sky-100 hover:text-white hover:bg-slate-800/90 border border-transparent hover:border-violet-400/30 transition-all" data-i18n="nav_home">
+          Главная
+        </a>
+        <a href="courses.html" class="px-4 py-2.5 rounded-xl text-sm font-extrabold text-sky-100 hover:text-white hover:bg-slate-800/90 border border-transparent hover:border-violet-400/30 transition-all flex items-center gap-1.5" data-i18n="nav_courses">
+          <span>Все 20 курсов</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-violet-600/40 text-violet-200">Топ AI</span>
+        </a>
+        <a href="offer.html" class="px-4 py-2.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow-lg border border-sky-400/40 transition-all" data-i18n="nav_offer">
+          Калькулятор Ваучера 80%
+        </a>
+        <a href="audit.html" class="px-4 py-2.5 rounded-xl text-sm font-extrabold text-sky-100 hover:text-white hover:bg-slate-800/90 border border-transparent hover:border-violet-400/30 transition-all flex items-center gap-1.5" data-i18n="nav_audit">
+          <span>Аудит &amp; Стратегия Роста</span>
+          <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+        </a>
       </nav>
 
-      <!-- Right Controls: Language Switcher RU | עב | EN + Theme Toggle + Phone -->
+      <!-- Right Controls: Language Switcher RU | עב | EN + Theme Toggle + Real Phone Numbers -->
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- 3-Language Switcher -->
         <div class="flex items-center bg-slate-900/90 border border-violet-400/30 rounded-xl p-1" role="group" aria-label="Language Switcher">
@@ -217,18 +228,23 @@
           <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
-        <!-- Direct Phone CTA -->
-        <a href="tel:*3331" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-sky-500 text-white font-bold text-sm shadow-lg shadow-violet-600/30 hover:opacity-95 transition-all">
-          <span>*3331</span>
+        <!-- Real Phone Numbers -->
+        <div class="hidden sm:flex flex-col items-end text-right">
+          <a href="tel:1800220607" class="font-display font-extrabold text-xs sm:text-sm text-sky-400 hover:text-sky-300">1-800-22-06-07</a>
+          <a href="tel:+97235603046" class="text-[11px] font-bold text-sky-200 hover:underline">+972-3-560-30-46</a>
+        </div>
+        <a href="tel:1800220607" class="sm:hidden px-3 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-sky-500 text-white font-extrabold text-xs shadow-md">
+          📞 1-800
         </a>
       </div>
     </div>
 
-    <!-- Mobile Sub-nav -->
+    <!-- Mobile Sub-nav (4 Buttons) -->
     <div class="lg:hidden flex items-center justify-around border-t border-violet-500/20 bg-slate-950/80 px-2 py-2 text-xs font-semibold">
-      <a href="index.html" class="px-3 py-1.5 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_home">Главная</a>
-      <a href="offer.html" class="px-3 py-1.5 rounded-lg bg-violet-600/30 text-white border border-violet-400/40" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
-      <a href="audit.html" class="px-3 py-1.5 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_audit">Аудит &amp; Рост</a>
+      <a href="index.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_home">Главная</a>
+      <a href="courses.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_courses_short">20 курсов</a>
+      <a href="offer.html" class="px-2 py-1 rounded-lg bg-violet-600/30 text-white border border-violet-400/40" data-i18n="nav_offer">Ваучер 80%</a>
+      <a href="audit.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_audit">Аудит &amp; Рост</a>
     </div>
   </header>
 
@@ -716,7 +732,7 @@
             Честный расчет окупаемости: государство через ваучер Министерства алии (до 7000₪) и армейский пикадон (до 100%) компенсирует основную стоимость курса. Минимальная зарплата новичка составляет от 9500–11000₪, а средний заработок специалиста с опытом достигает 19500₪. Личные вложения окупаются уже в первые 1–2 месяца работы!
           </p>
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="https://wa.me/97235603046?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D0%B2%D0%B0%D1%83%D1%87%D0%B5%D1%80%2080%25%20(7000%E2%82%AA)%20%D0%B2%20Newman%20Center" target="_blank" rel="noopener" class="shimmer-btn px-6 py-3.5 rounded-2xl font-display font-extrabold text-white text-sm shadow-lg">
+            <a href="https://wa.me/972532733777?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D0%B2%D0%B0%D1%83%D1%87%D0%B5%D1%80%2080%25%20(7000%E2%82%AA)%20%D0%B2%20Newman%20Center" target="_blank" rel="noopener" class="shimmer-btn px-6 py-3.5 rounded-2xl font-display font-extrabold text-white text-sm shadow-lg">
               <span data-i18n="succ_cta_wa">Проверить моё право на ваучер в WhatsApp</span>
             </a>
             <a href="audit.html" class="px-5 py-3.5 rounded-2xl border border-violet-400/40 text-sky-100 hover:text-white font-bold text-sm transition-all" data-i18n="succ_cta_audit">
@@ -736,22 +752,24 @@
         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-sky-500 flex items-center justify-center font-display font-extrabold text-white">N</div>
         <div>
           <div class="font-display font-extrabold text-white text-base">Newman Center</div>
-          <p class="text-xs text-sky-200/80" data-i18n="footer_copy">© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • *3331</p>
+          <p class="text-xs text-sky-200/80" data-i18n="footer_copy">© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • 1-800-22-06-07 • +972-3-560-30-46</p>
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-4 text-xs font-bold text-sky-200">
         <a href="index.html" class="hover:text-white" data-i18n="nav_home">Главная</a>
+        <a href="courses.html" class="hover:text-white text-violet-300" data-i18n="nav_courses">Все 20 курсов</a>
         <a href="offer.html" class="text-white underline decoration-sky-400" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
         <a href="audit.html" class="hover:text-white" data-i18n="nav_audit">Аудит &amp; Стратегия Роста</a>
-        <a href="tel:*3331" class="px-3 py-1.5 rounded-lg bg-violet-600/30 border border-violet-400/40 text-white">*3331</a>
+        <a href="tel:1800220607" class="px-3 py-1.5 rounded-lg bg-violet-600/30 border border-violet-400/40 text-white">1-800-22-06-07</a>
+        <a href="tel:+97235603046" class="px-3 py-1.5 rounded-lg bg-slate-800 border border-sky-400/40 text-sky-200 hover:text-white">+972-3-560-30-46</a>
       </div>
     </div>
   </footer>
 
   <!-- MOBILE STICKY THUMB-ZONE BAR -->
   <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden glass-card border-t border-violet-400/40 px-3 py-2.5 flex items-center justify-between gap-2">
-    <a href="tel:*3331" class="flex-1 py-3 rounded-xl bg-slate-900 border border-violet-400/40 text-center font-extrabold text-xs text-white">
-      📞 *3331
+    <a href="tel:1800220607" class="flex-1 py-3 rounded-xl bg-slate-900 border border-violet-400/40 text-center font-extrabold text-xs text-white">
+      📞 1-800-22-06-07
     </a>
     <button type="button" onclick="openBottomSheet()" class="flex-[2] py-3 rounded-xl shimmer-btn text-center font-extrabold text-xs text-white shadow-lg" data-i18n="mob_bar_cta">
       Забрать ваучер до 80% (7000₪)
@@ -1389,8 +1407,8 @@
       const sInfo = statusRules[currentStatus] || statusRules.olim;
       const cov = sInfo.pct[currentLang] + ' ' + sInfo.sum[currentLang];
 
-      const msg = `Newman Center (*3331) — Заявка на ваучер / субсидию:\nИмя: ${name || 'Кандидат'}\nТелефон: ${phone || 'Уточнить в чате'}\nКурс: ${trackText}\nСубсидия: ${cov}`;
-      const url = 'https://wa.me/97235603046?text=' + encodeURIComponent(msg);
+      const msg = `Newman Center (1-800-22-06-07) — Заявка на ваучер / субсидию:\nИмя: ${name || 'Кандидат'}\nТелефон: ${phone || 'Уточнить в чате'}\nКурс: ${trackText}\nСубсидия: ${cov}`;
+      const url = 'https://wa.me/972532733777?text=' + encodeURIComponent(msg);
       window.open(url, '_blank', 'noopener');
     }
 
@@ -1413,8 +1431,8 @@
     function sendModalToWhatsApp() {
       const name = (document.getElementById('modal-name')?.value || '').trim();
       const phone = (document.getElementById('modal-phone')?.value || '').trim();
-      const msg = `Newman Center (*3331) — Запрос списка документов на ваучер до 80% (7000₪) / Пикадон 100%:\nИмя: ${name || 'Кандидат'}\nТелефон: ${phone || 'В чате'}`;
-      const url = 'https://wa.me/97235603046?text=' + encodeURIComponent(msg);
+      const msg = `Newman Center (1-800-22-06-07) — Запрос списка документов на ваучер до 80% (7000₪) / Пикадон 100%:\nИмя: ${name || 'Кандидат'}\nТелефон: ${phone || 'В чате'}`;
+      const url = 'https://wa.me/972532733777?text=' + encodeURIComponent(msg);
       window.open(url, '_blank', 'noopener');
       closeBottomSheet();
     }
