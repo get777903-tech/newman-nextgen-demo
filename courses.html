@@ -97,19 +97,19 @@
         </div>
       </a>
 
-      <!-- 4 DISTINCT ENLARGED NAVIGATION BUTTONS -->
-      <nav class="hidden lg:flex items-center gap-2 bg-slate-900/90 border border-violet-400/40 rounded-2xl p-1.5 shadow-xl">
-        <a href="index.html" class="px-4 py-2.5 rounded-xl text-sm font-bold text-sky-100 hover:text-white hover:bg-violet-600/30 border border-transparent hover:border-violet-400/30 transition-all flex items-center gap-1.5" data-i18n="nav_home">
-          <span>🏛️</span> <span>Главная</span>
+      <!-- 4 DISTINCT ENLARGED EXTRA-BOLD NAVIGATION BUTTONS (Requirement: Large Bold Font & Clear Page Switching) -->
+      <nav class="hidden lg:flex items-center gap-3 bg-slate-950/95 border-2 border-violet-400/50 rounded-2xl p-2 shadow-2xl" aria-label="Main Navigation">
+        <a href="index.html" class="px-5 py-3 rounded-xl text-base font-black text-sky-100 hover:text-white bg-slate-900/90 hover:bg-slate-800 border-2 border-violet-400/40 hover:border-sky-400 transition-all flex items-center gap-2 shadow-md hover:scale-105" data-i18n="nav_home">
+          <span class="text-lg">🏛️</span> <span>Главная</span>
         </a>
-        <a href="courses.html" class="px-4 py-2.5 rounded-xl text-sm font-extrabold text-white bg-gradient-to-r from-violet-600 to-sky-500 shadow-md shadow-violet-600/30 ring-2 ring-sky-400/50 flex items-center gap-1.5" data-i18n="nav_courses">
-          <span>📚</span> <span>Все 20 курсов</span>
+        <a href="courses.html" class="px-6 py-3 rounded-xl text-base font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-2 border-sky-300 ring-4 ring-sky-400/40 flex items-center gap-2 scale-105 transition-all" data-i18n="nav_courses">
+          <span class="text-lg">📚</span> <span>Все 20 курсов</span>
         </a>
-        <a href="offer.html" class="px-4 py-2.5 rounded-xl text-sm font-bold text-sky-100 hover:text-white hover:bg-violet-600/30 border border-transparent hover:border-violet-400/30 transition-all flex items-center gap-1.5" data-i18n="nav_offer">
-          <span>🎫</span> <span>Калькулятор 80%</span>
+        <a href="offer.html" class="px-5 py-3 rounded-xl text-base font-black text-sky-100 hover:text-white bg-slate-900/90 hover:bg-slate-800 border-2 border-violet-400/40 hover:border-sky-400 transition-all flex items-center gap-2 shadow-md hover:scale-105" data-i18n="nav_offer">
+          <span class="text-lg">🎫</span> <span>Калькулятор Ваучера 80%</span>
         </a>
-        <a href="audit.html" class="px-4 py-2.5 rounded-xl text-sm font-bold text-sky-100 hover:text-white hover:bg-violet-600/30 border border-transparent hover:border-violet-400/30 transition-all flex items-center gap-1.5" data-i18n="nav_audit">
-          <span>📊</span> <span>Аудит &amp; ROI</span>
+        <a href="audit.html" class="px-5 py-3 rounded-xl text-base font-black text-sky-100 hover:text-white bg-slate-900/90 hover:bg-slate-800 border-2 border-violet-400/40 hover:border-sky-400 transition-all flex items-center gap-2 shadow-md hover:scale-105" data-i18n="nav_audit">
+          <span class="text-lg">📊</span> <span>Аудит &amp; Стратегия Роста</span>
         </a>
       </nav>
 
@@ -156,19 +156,31 @@
 
   <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
 
-    <!-- HERO SECTION OF COURSES DIRECTORY -->
+    <!-- HERO SECTION OF COURSES DIRECTORY (2-COLUMN WITH DONOR IMAGE) -->
     <section class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-sky-400/40 mb-10 shadow-2xl">
-      <div class="max-w-3xl">
-        <span class="inline-block px-3.5 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold uppercase tracking-wider mb-3" data-i18n="cat_badge">
-          Официальный каталог 2026 • 35 лет опыта • Ваучер до 80% (до 7000₪) и Пикадон 100%
-        </span>
-        <h1 class="font-display font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white leading-tight">
-          <span data-i18n="cat_title_1">Полный каталог всех программ</span>
-          <span class="gradient-text"> Newman Center</span>
-        </h1>
-        <p class="text-sky-100/90 text-sm sm:text-base mt-3 leading-relaxed" data-i18n="cat_desc">
-          Все 20 направлений распределены по группам. Самые востребованные и высокомаржинальные курсы 2026 года расположены в начале списка. Все программы доступны с государственной субсидией ваучера Министерства алии до 80% (до 7 000 ₪) и армейского «Пикадона» до 100%.
-        </p>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold uppercase tracking-wider mb-3" data-i18n="cat_badge">
+            Официальный каталог 2026 • 35 лет опыта • Ваучер до 80% (до 7000₪) и Пикадон 100%
+          </span>
+          <h1 class="font-display font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white leading-tight">
+            <span data-i18n="cat_title_1">Полный каталог всех программ</span>
+            <span class="gradient-text"> Newman Center</span>
+          </h1>
+          <p class="text-sky-100/90 text-sm sm:text-base mt-3 leading-relaxed" data-i18n="cat_desc">
+            Все 20 направлений распределены по группам. Самые востребованные и высокомаржинальные курсы 2026 года расположены в начале списка. Все программы доступны с государственной субсидией ваучера Министерства алии до 80% (до 7 000 ₪) и армейского «Пикадона» до 100%. Обучение из дома с личным AI-ассистентом 24/7 и очные хакатоны.
+          </p>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-sky-400/40 shadow-2xl group">
+            <img src="assets/newman_donor_main.jpg" alt="Кампус Newman Center и студенты" class="w-full h-64 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4">
+              <span class="px-2.5 py-1 rounded-full bg-violet-600/90 text-white text-[11px] font-bold shadow">Оригинальный кампус Newman Center</span>
+              <p class="text-xs text-sky-100 mt-1 font-semibold">35 лет подготовки специалистов в Израиле (Тель-Авив, Рамат-Ган)</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Quick Category Jump Links -->
@@ -196,25 +208,33 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Course 1 -->
         <div class="glass-card rounded-2xl p-6 border-2 border-fuchsia-500/40 flex flex-col justify-between hover:border-fuchsia-400 transition-all shadow-xl relative overflow-hidden group">
-          <div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-fuchsia-500/25 text-fuchsia-200 text-[10px] font-extrabold uppercase">ТОП №1</div>
+          <div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-fuchsia-500/25 text-fuchsia-200 text-[10px] font-extrabold uppercase">ТОП №1 • ХИТ 2026</div>
           <div class="space-y-3">
             <span class="text-2xl">🤖</span>
             <h3 class="font-display font-extrabold text-lg text-white">Прикладной AI: управление нейросетями в работе и бизнесе</h3>
             <p class="text-xs text-sky-100/85 leading-relaxed">
-              Практический курс для предпринимателей, маркетологов и руководителей. Внедрение ChatGPT, Claude, Cursor, AI-ассистентов и автоматизация рабочих процессов компании.
+              Практический курс для специалистов и руководителей. <strong>Обучение вайб-кодингу с помощью AI-инструментов (Cursor, Claude 3.7, GitHub Copilot) + знание IT-архитектуры</strong>, внедрение AI-ассистентов и автоматизация бизнес-процессов компании.
             </p>
             <div class="space-y-1.5 pt-2 text-xs">
               <div class="flex items-center justify-between text-slate-300">
+                <span>Полная стоимость:</span>
+                <span class="font-bold text-slate-200">8 750 ₪</span>
+              </div>
+              <div class="flex items-center justify-between text-emerald-300 font-bold">
+                <span>Ваучер 80% от государства:</span>
+                <span>- 7 000 ₪</span>
+              </div>
+              <div class="flex items-center justify-between text-amber-300 font-extrabold bg-amber-950/40 p-1.5 rounded-lg border border-amber-500/30">
+                <span>К оплате студентом:</span>
+                <span>всего 1 750 ₪</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300 pt-1">
                 <span>Рыночная зарплата:</span>
                 <span class="font-bold text-sky-300">18 000–26 000 ₪</span>
               </div>
               <div class="flex items-center justify-between text-slate-300">
-                <span>Гос. ваучер:</span>
-                <span class="font-bold text-emerald-300">до 80% (до 7 000 ₪)</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-300">
                 <span>Формат:</span>
-                <span class="text-white font-semibold">Дома с AI-ассистентом 24/7 + практика</span>
+                <span class="text-white font-semibold">Дома с AI-ассистентом + алмазы 💎</span>
               </div>
             </div>
           </div>
@@ -259,9 +279,9 @@
         <div class="glass-card rounded-2xl p-6 border border-violet-400/40 flex flex-col justify-between hover:border-violet-300 transition-all shadow-xl">
           <div class="space-y-3">
             <span class="text-2xl">⚡</span>
-            <h3 class="font-display font-extrabold text-lg text-white">Создание AI-ассистентов для бизнеса</h3>
+            <h3 class="font-display font-extrabold text-lg text-white">Создание AI-ассистентов и Вайб-кодинг</h3>
             <p class="text-xs text-sky-100/85 leading-relaxed">
-              Разработка кастомных чат-ботов, агентных пайплайнов и голосовых ассистентов для отделов продаж и сервиса с интеграцией в CRM и мессенджеры.
+              Разработка кастомных чат-ботов, агентных пайплайнов и голосовых ассистентов. <strong>Обучение вайб-кодингу с AI-инструментами + основы IT-архитектуры</strong> с бесшовной интеграцией в CRM и мессенджеры.
             </p>
             <div class="space-y-1.5 pt-2 text-xs">
               <div class="flex items-center justify-between text-slate-300">
@@ -667,7 +687,7 @@
           Как работает обучение из дома с AI-ассистентом и геймификацией алмазами 💎
         </h2>
         <p class="text-sky-100/90 text-sm mt-2 leading-relaxed">
-          Теория и тесты сдаются круглосуточно дома с персональным AI-ассистентом. Алмазы мотивируют студента дойти до конца курса, а руководству дают 100% контроль успеваемости. Затраты учебного центра снижаются на 60–70%, снимая физический лимит в 20 мест в аудитории.
+          План геймификации с алмазами: за каждое действие или важное выполнение задания учеником даётся от 1 до 10 алмазов в зависимости от сложности, они суммируются и проговариваются каждый второй диалог. AI-ассистент за прохождение материала награждает алмазами — это дает глубокую вовлеченность в учебный процесс и 100% прозрачный контроль количества пройденного материала.
         </p>
       </div>
 
@@ -686,16 +706,16 @@
               </span>
             </div>
 
-            <!-- Dialogue Simulation -->
+            <!-- Dialogue Simulation (1 to 10 Diamonds rule, voiced every 2nd dialogue) -->
             <div class="space-y-3 text-xs mb-5">
               <div class="p-3 rounded-xl bg-slate-950/80 border border-violet-500/30 text-sky-100 leading-relaxed">
-                🤖 <strong class="text-sky-300">AI-ассистент Newman:</strong> Отлично разобран модуль «Промптинг и автоматизация API»! Ты ответил на 5 из 5 тестовых вопросов без подсказок. Начислено <span class="text-amber-300 font-extrabold">+60 💎</span>! До статуса «Junior AI Specialist» осталось 140 💎.
+                🤖 <strong class="text-sky-300">AI-ассистент Newman (Шаг 1):</strong> Отлично разобран модуль «Вайб-кодинг и основы IT-архитектуры»! За верное решение задачи по микросервисам начислено <span class="text-amber-300 font-extrabold">+8 💎</span> (из 10 возможных по уровню сложности).
               </div>
               <div class="p-3 rounded-xl bg-violet-950/60 border border-sky-400/30 text-white leading-relaxed ml-4">
-                👨‍🎓 <strong class="text-violet-300">Студент:</strong> Как подключить webhook из бота в Telegram к таблице лидов?
+                👨‍🎓 <strong class="text-violet-300">Студент:</strong> Как подключить AI-ассистента к CRM через webhook и протестировать Cursor Composer?
               </div>
               <div class="p-3 rounded-xl bg-slate-950/80 border border-violet-500/30 text-sky-100 leading-relaxed">
-                🤖 <strong class="text-sky-300">AI-ассистент Newman:</strong> Вот пошаговый код на Python (FastAPI). Вставь свой токен и протестируй. За успешную проверку кода наставник зачислит еще <span class="text-amber-300 font-extrabold">+100 💎</span>!
+                🤖 <strong class="text-sky-300">AI-ассистент Newman (Шаг 2 • Подведение итогов):</strong> Отличный код! За практический скрипт начислено <span class="text-amber-300 font-extrabold">+10 💎</span>. <em>Итог за два диалога:</em> за последние шаги суммировано +18 💎! Твой общий баланс: <strong>360 💎</strong>. Ты на 82% ближе к сертификату!
               </div>
             </div>
 
